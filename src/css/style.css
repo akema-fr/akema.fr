@@ -1,22 +1,23 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     overflow-y: scroll;
 }
 
-body{
-    background: #f1f1f1; 
+body {
+    background: #f1f1f1;
 }
 
-a{
-    color:#30438F;
+a {
+    color: #30438F;
     text-decoration: none;
     font-weight: bold;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
@@ -25,8 +26,8 @@ a:hover{
     src: url("/src/fontfont/loaded.ttf");
 }
 
-#header-container{
-    height:118px;
+#header-container {
+    height: 118px;
     overflow: hidden;
     background-color: #30438F;
 
@@ -36,18 +37,18 @@ a:hover{
     box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 }
 
-header{
+header {
     background-color: red;
     height: 100%;
     background: url('../images/smoke.png') #30438F no-repeat;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: white;
 }
 
-header h1{
+header h1 {
     background: url('../images/logo_akema.png') transparent no-repeat;
     background-size: 274px;
     text-indent: -9999px;
@@ -57,7 +58,7 @@ header h1{
     margin: 30px 0 0;
 }
 
-nav{
+nav {
     float: right;
     height: 100%;
     width: 630px;
@@ -78,11 +79,10 @@ nav li:last-child a {
     margin-right: 0;
 }
 
-
 nav a {
     font-size: 15px;
-    margin-right:12px;
-    margin-top:48px;
+    margin-right: 12px;
+    margin-top: 48px;
     float: left;
     display: block;
     text-decoration: none;
@@ -98,54 +98,54 @@ nav a {
     padding: 5px;
 }
 
-nav .current{
-    background-color:black;
-}
-nav a:hover {
-    background-color:black;
-    text-decoration: none;
-}
-.wrapper{
-    width: 960px;
-    margin: 0 auto; 
+nav .current {
+    background-color: black;
 }
 
-#main-container{
-    height:100%;
+nav a:hover {
+    background-color: black;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#main-container {
+    height: 100%;
     margin-bottom: 50px;
 }
 
-
-
-#footer-container{
-    position:absolute;
-    bottom:0;
-    width:100%;
+#footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background: #F1F1F1;
     position: fixed;
 }
 
-footer{
-    position: relative; 
+footer {
+    position: relative;
     padding: 10px 0;
-    font-size:12px;
-    color:black;
+    font-size: 12px;
+    color: black;
 }
-  
-footer a{
+
+footer a {
     color: #30438F;
-    text-decoration: none; 
+    text-decoration: none;
     font-weight: bold;
 }
 
-#borderLeft  {
+#borderLeft {
     border-top: 1px solid black;
     position: absolute;
     top: 0;
     width: 75px;
 }
 
-img{
+img {
     background: white;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
@@ -162,6 +162,7 @@ img{
     font-size: 18px !important;
     color: rgb(48, 67, 143);
 }
+
 .akema-text-little {
     font-family: "Loaded";
     font-size: 16px !important;
@@ -183,27 +184,27 @@ img{
     white-space: nowrap;
 }
 
-#main-info{
+#main-info {
     margin-top: 40px;
 }
 
-#main-picture{
+#main-picture {
     margin: 40px auto;
 }
 
-#contact{
+#contact {
     margin-top: 20px;
     display: inline;
     float: left;
 }
 
-#address{
+#address {
     float: left;
     width: 45%;
     margin-right: 5%;
 }
 
-#address p{
+#address p {
     margin-top: 0;
 }
 
@@ -211,54 +212,57 @@ img{
     margin-top: 60px;
 }
 
-#map img:hover {
-    -webkit-box-shadow: 0px 0px 7px 3px black;/*#30438F;*/
-    -moz-box-shadow: 0px 0px 7px 3px black;/*#30438F;*/
-    box-shadow: 0px 0px 7px 3px black;/*#30438F;*/
-    border-top: 1px solid black;/*#30438F;*/
-}
-
-#main-form{
-    float:left;
+#main-form {
+    float: left;
     margin-top: 20px;
 }
 
-#contact-form{
-    margin:1em 0;
-    padding-top:10px;
+#contact-form {
+    margin: 1em 0;
+    padding-top: 10px;
 }
 
-#contact-form fieldset{
-    margin:0;
-    padding:0;
-    border:none;    
-    float:left;
-    display:inline;
-    width:260px;
-}     
-
-#contact-form legend{display:none;}    
-#contact-form p{margin:.5em 0;}    
-#contact-form label{display:block;}    
-#contact-form input, #contact-form textarea{
-    border:1px solid #ddd;
-    background-color:#fff;
-    padding:3px;
-}       
-#contact-form textarea{
-height:125px;
-overflow:auto;
-max-width: 692px;
-max-height: 427px;
-}                   
-#contact-form p.submit{
-clear:both;
-padding:10px 25px 20px 0px;
-margin:0;
-text-align:left;
-margin-top: 15px;
+#contact-form fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    float: left;
+    display: inline;
+    width: 260px;
 }
 
+#contact-form legend {
+    display: none;
+}
+
+#contact-form p {
+    margin: .5em 0;
+}
+
+#contact-form label {
+    display: block;
+}
+
+#contact-form input, #contact-form textarea {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 3px;
+}
+
+#contact-form textarea {
+    height: 125px;
+    overflow: auto;
+    max-width: 692px;
+    max-height: 427px;
+}
+
+#contact-form p.submit {
+    clear: both;
+    padding: 10px 25px 20px 0px;
+    margin: 0;
+    text-align: left;
+    margin-top: 15px;
+}
 
 .btn {
     background: #30438f;
@@ -274,7 +278,7 @@ margin-top: 15px;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    text-align: center;  
+    text-align: center;
     font-weight: bold;
     margin-bottom: 5px;
     padding: 5px;
@@ -283,14 +287,14 @@ margin-top: 15px;
     display: block;
 }
 
-
 .btn:hover {
     text-decoration: none;
 }
 
-#main-info{
+#main-info {
     display: none;
 }
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -305,36 +309,41 @@ margin-top: 15px;
     *zoom: 1;
 }
 
-@media (max-width : 960px) {
+@media (max-width: 960px) {
 
-    .wrapper{
-        width:90%;
+    .wrapper {
+        width: 90%;
     }
-    #header-container{
+
+    #header-container {
         height: 118px;
     }
-    header{
-        display:block;
-        margin:0 auto;
-        height:60px;
+
+    header {
+        display: block;
+        margin: 0 auto;
+        height: 60px;
         background: transparent;
     }
-    header h1{
-        width:288px;
+
+    header h1 {
+        width: 288px;
         margin: auto;
         margin-top: 10px;
     }
-    nav{
-        width:100%;
-        margin:auto;
+
+    nav {
+        width: 100%;
+        margin: auto;
         margin-top: 6px;
     }
-    nav a{
-        margin:0px;
+
+    nav a {
+        margin: 0px;
         margin-right: 10px;
-        box-sizing:border-box;
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         border: 1px solid black;
         display: block;
         margin-bottom: 10px;
@@ -347,50 +356,58 @@ margin-top: 15px;
         display: block;
     }
 
-    #footer-container{
+    #footer-container {
         position: relative;
     }
 }
 
-@media (max-width : 530px) {
+@media (max-width: 530px) {
 
-    #main-picture img{
+    #main-picture img {
         width: 100%;
     }
-    #main-info{
+
+    #main-info {
         display: block;
     }
-    #main-picture{
+
+    #main-picture {
         margin-top: 20px;
     }
-    #header-container{
+
+    #header-container {
         height: 236px;
     }
-    header{
+
+    header {
         height: 236px;
     }
-    header h1{
-        width:100%;
+
+    header h1 {
+        width: 100%;
     }
-    header h1{
-        width:100%;
+
+    header h1 {
+        width: 100%;
     }
-    nav a{
-        width:100%;
+
+    nav a {
+        width: 100%;
         min-width: 274px;
     }
-    #map img{
+
+    #map img {
         float: left;
         width: 100%;
         height: 195px;
         margin-top: 10px;
     }
-    #address{
-        width:100%;
+
+    #address {
+        width: 100%;
     }
 
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -482,7 +499,6 @@ margin-top: 15px;
     /*
      * Don't show links for images, or javascript/internal links
      */
-
     .ir a:after,
     a[href^="javascript:"]:after,
     a[href^="#"]:after {

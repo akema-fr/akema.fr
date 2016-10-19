@@ -199,17 +199,15 @@ img{
 
 #address{
     float: left;
-    width:45%;
+    width: 45%;
+    margin-right: 5%;
 }
 
 #address p{
     margin-top: 0;
 }
 
-#map img{
-    float: right;
-    width: 453px;
-    height: 280px;
+#map img {
     margin-top: 60px;
 }
 

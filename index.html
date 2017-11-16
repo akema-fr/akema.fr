@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/bootstrap/css/bootstrap.min.css">
 
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -36,6 +37,17 @@
 
         <img src="src/images/home.jpg">
     </div>
+    <!-- === BLACK FRIDAY MODAL === -->
+    <br/>
+    <div id="black-friday-button">
+        <h4>À l'occasion du Black Friday,<br />
+            découvrez des promotions sur nos produits jusqu'à <b>-75%</b> !</h4>
+        <br/>
+        <button href="#bf-modal" data-toggle="modal">Découvrir les offres Black Friday !</button>
+    </div>
+    <!-- ========================== -->
+
+
 </div>
 
 <div id="footer-container">
@@ -46,5 +58,231 @@
     </footer>
 </div>
 
+
+<!-- === BLACK FRIDAY MODAL === -->
+<div id="bf-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header row">
+                <div class="smoke-div"></div>
+                <img class="col-xs-12 col-sm-6" src="src/images/black-friday/logo-akema.png" alt="Logo Akema"
+                     id="logo-akema" data-target="#products-carousel" data-slide-to="0">
+
+                <div id="products-logo-div" class="col-xs-12 col-sm-6">
+                    <div style="height: 15px;" class="visible-xs"></div>
+                    <img data-target="#products-carousel" data-slide-to="1"
+                         src="src/images/black-friday/apidae_logo_sale.png" alt="Logo Apidae" class="product-logo col-xs-4">
+                    <img data-target="#products-carousel" data-slide-to="2" src="src/images/black-friday/logo_akemail_sale.png"
+                         alt="Logo Akemail" class="product-logo col-xs-4">
+                    <img data-target="#products-carousel" data-slide-to="3"
+                         src="src/images/black-friday/akloud_logo_sale.png" alt="Logo Akloud" class="product-logo col-xs-4">
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div id="products-carousel" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item slide active" id="black-friday-slide">
+                            <h1>Offres Spéciales !</h1>
+                            <img class="col-xs-offset-2 col-xs-10 col-lg-offset-2"
+                                 src="src/images/black-friday/black_friday.png">
+                        </div>
+
+                        <div class="item slide" id="apidae-slide">
+                            <img src="src/images/black-friday/1%20image%20-%20APIDAE.PNG" alt="Apidae">
+                            <h3 class="offer-catchphrase"><span class="offer-price">-75%</span> pendant 3 mois!
+                                <br/>
+                                <a data-target="#products-carousel" data-slide-to="4">Informations et devis </a>
+                                ou
+                                <span class="product-site-link"><a href="http://www.apidae.biz"> plus de détails sur apidae.biz</a></span>
+                            </h3>
+                        </div>
+
+                        <div class="item slide" id="akemail-slide">
+                            <img src="src/images/black-friday/1%20image%20-%20AKEMAIL.PNG" alt="Akemail">
+                            <h3 class="offer-catchphrase"><span class="offer-price">-75%</span> pendant 3 mois!<br/>
+                                <a data-target="#products-carousel" data-slide-to="4">Informations et devis </a>
+                                ou
+                                <span class="product-site-link"><a href="http://www.akemail.fr"> plus de détails sur akemail.fr</a></span>
+                            </h3>
+                        </div>
+
+                        <div class="item slide" id="akloud-slide">
+                            <img src="src/images/black-friday/1%20image%20-Akloud.PNG" alt="Akloud">
+                            <h3 class="offer-catchphrase"><span class="offer-price">-75%</span> pendant 3 mois!
+                                <br/>
+                                <a data-target="#products-carousel" data-slide-to="4">Informations et devis</a>
+                            </h3>
+                        </div>
+
+                        <div class="item slide" id="contact-slide">
+                            <h3>Mélanie se fera un plaisir de vous faire une démonstration en direct.</h3>
+                            <form action="http://formspree.io/maxime.dubourg@protonmail.com" method="post"
+                                  id="contact-form">
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="product-field">Produit *: </label><br class="hidden-xs"/>
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <select type="text" id="product-field" name="Product">
+                                            <option value="-1">Choisissez un produit...</option>
+                                            <option value="Apidae">Apidae</option>
+                                            <option value="Akemail">Akemail</option>
+                                            <option value="Akloud">Akloud</option>
+                                        </select><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="company-field">Entreprise : </label><br class="hidden-xs"/>
+
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <input type="text" id="company-field" name="company"><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="lastname-field">Nom *: </label><br class="hidden-xs"/>
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <input type="text" id="lastname-field" name="lastname"><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="firstname-field">Prénom *: </label><br class="hidden-xs"/>
+
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <input type="text" id="firstname-field" name="firstname"><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="mail-field">E-mail *: </label><br class="hidden-xs"/>
+
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <input type="text" id="mail-field" name="e-mail"><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="phone-field">Téléphone : </label><br class="hidden-xs"/>
+
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <input type="text" id="phone-field" name="phone"><br/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
+                                        <label for="msg-field">Message : </label><br class="hidden-xs"/>
+
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
+                                        <textarea id="msg-field" style="margin-bottom: 0 !important;"
+                                                  name="message"></textarea><br/>
+                                    </div>
+                                </div>
+
+                                <br/>
+                                <p style="color: #b92c28" id="error-message"></p>
+                                <br/>
+                                <input type="submit" style="width: auto !important; color: black" value="Envoyer"/>
+                            </form>
+                        </div>
+
+
+                        <a class="left carousel-control" href="#products-carousel" data-slide="prev" style="color: white">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#products-carousel" data-slide="next" style="color: white">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <a href="#bf-modal" data-toggle="modal">Continuer vers Akema.fr</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ========================== -->
+
+
 </body>
 </html>
+
+<script type="application/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="application/javascript" src="src/css/bootstrap/js/bootstrap.min.js"></script>
+<script type="application/javascript">
+    var error_msg = '';
+
+    $('#bf-modal').modal({'backdrop': 'true'});
+    $('.modal-footer').slideDown();
+
+    $('#products-carousel').carousel({interval: 10000}).on('slide.bs.carousel', function (e) {
+        var nextH = $(e.relatedTarget).height();
+        $(this).find('.active.item').parent().animate({height: nextH}, 500);
+
+        if ($('#black-friday-slide').hasClass('active')) {
+            $('.modal-footer').slideUp();
+        }
+
+    });
+
+    $('#products-carousel').on('slid.bs.carousel', function () {
+        if ($('#contact-slide').hasClass('active'))
+            $('#products-carousel').carousel('pause');
+
+        if ($('#black-friday-slide').hasClass('active')) {
+            $('.modal-footer').addClass('visible');
+        } else {
+            $('.modal-footer').removeClass('visible');
+        }
+
+        if ($('#black-friday-slide').hasClass('active')) {
+            $('.modal-footer').slideDown();
+        }
+    });
+
+    $('#bf-modal .modal-dialog').hover(
+        function () {
+            $("#products-carousel").carousel('pause');
+        },
+        function () {
+            $("#products-carousel").carousel('cycle');
+        }
+    );
+
+    // verification before submit
+    $("#contact-form").submit(function (e) {
+        if ($('#firstname-field').val() && $('#lastname-field').val() && $('#mail-field').val()
+            && $('#product-field').val() != "-1") {
+
+            var mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if (!mail_regex.test($('#mail-field').val())) {
+                error_msg = "L'e-mail renseigné n'a pas un format valide.";
+                $('#error-message').text(error_msg);
+                e.preventDefault();
+            }
+        }
+        // avoid to execute the actual submit of the form.
+        else {
+            error_msg = "Veuillez au minimum cocher un produit, ainsi que remplir les champs marqués d'une astérisque (*).";
+            $('#error-message').text(error_msg);
+            e.preventDefault();
+        }
+    });
+</script>

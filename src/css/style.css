@@ -543,4 +543,107 @@ img {
     }
 }
 
+/* ===== BLACK FRIDAY STYLE ====== */
 
+#black-friday-button {
+    text-align: center;
+    padding: 25px;
+    background-color: black;
+    color: white;
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+#black-friday-button > button {
+    padding: 10px 20px;
+    border-radius: 0;
+    background-color: #30438F;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+
+#bf-modal {
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+}
+
+#bf-modal img {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#bf-modal > .modal-dialog > .modal-content {
+    border-radius: 0;
+    background-color: black;
+}
+
+#bf-modal #products-carousel {
+    transition: all 0.5s ease;
+}
+
+#bf-modal .modal-header {
+    margin: 0;
+    padding: 25px 15px 25px 15px;
+    background-color: #30438F;
+    border: none;
+}
+
+#bf-modal .modal-header img {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#bf-modal .modal-body {
+    padding: 0;
+    padding-bottom: 25px;
+    background-color: black;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+#bf-modal .modal-footer {
+    display: none;
+    text-align: center;
+    border: none;
+}
+
+#bf-modal #black-friday-slide {
+    text-align: center;
+}
+
+#black-friday-slide > img {
+    background-color: black;
+    padding-bottom: 43px;
+}
+
+#products-carousel .offer-catchphrase .offer-price {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#products-carousel form {
+    padding: 20px 10% 10px 10% ;
+}
+
+
+#products-carousel #product-choice-div {
+    text-align: left;
+}
+
+#products-carousel form #product-choice-div span {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#products-carousel form .row {
+    text-align: left;
+}
+
+#products-carousel form .row input, textarea, select {
+    margin-bottom: 10px;
+    width: 100%;
+    color: #0f0f0f !important;
+    resize: none;
+}

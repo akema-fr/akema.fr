@@ -38,6 +38,7 @@
         <img src="src/images/home.jpg">
     </div>
     <!-- === BLACK FRIDAY MODAL === -->
+    <!--
     <br/>
     <div id="black-friday-button">
         <h4>À l'occasion du Black Friday,<br />
@@ -45,6 +46,7 @@
         <br/>
         <button href="#bf-modal" data-toggle="modal">Découvrir les offres Black Friday !</button>
     </div>
+    !-->
     <!-- ========================== -->
 
 
@@ -58,8 +60,8 @@
     </footer>
 </div>
 
-
 <!-- === BLACK FRIDAY MODAL === -->
+<!--
 <div id="bf-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -83,7 +85,6 @@
             <div class="modal-body">
                 <div id="products-carousel" class="carousel slide" data-ride="carousel">
 
-                    <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item slide active" id="black-friday-slide">
                             <h1>Offres Spéciales !</h1>
@@ -120,7 +121,7 @@
 
                         <div class="item slide" id="contact-slide">
                             <h3>Mélanie se fera un plaisir de vous faire une démonstration en direct.</h3>
-                            <form action="http://formspree.io/fbernard@akema.fr" method="post"
+                            <form action="http://formspree.io/" method="post"
                                   id="contact-form">
                                 <div class="row">
                                     <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
@@ -218,6 +219,7 @@
         </div>
     </div>
 </div>
+-->
 <!-- ========================== -->
 
 
@@ -227,62 +229,62 @@
 <script type="application/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="application/javascript" src="src/css/bootstrap/js/bootstrap.min.js"></script>
 <script type="application/javascript">
-    var error_msg = '';
-
-    $('#bf-modal').modal({'backdrop': 'true'});
-    $('.modal-footer').slideDown();
-
-    $('#products-carousel').carousel({interval: 10000}).on('slide.bs.carousel', function (e) {
-        var nextH = $(e.relatedTarget).height();
-        $(this).find('.active.item').parent().animate({height: nextH}, 500);
-
-        if ($('#black-friday-slide').hasClass('active')) {
-            $('.modal-footer').slideUp();
-        }
-
-    });
-
-    $('#products-carousel').on('slid.bs.carousel', function () {
-        if ($('#contact-slide').hasClass('active'))
-            $('#products-carousel').carousel('pause');
-
-        if ($('#black-friday-slide').hasClass('active')) {
-            $('.modal-footer').addClass('visible');
-        } else {
-            $('.modal-footer').removeClass('visible');
-        }
-
-        if ($('#black-friday-slide').hasClass('active')) {
-            $('.modal-footer').slideDown();
-        }
-    });
-
-    $('#bf-modal .modal-dialog').hover(
-        function () {
-            $("#products-carousel").carousel('pause');
-        },
-        function () {
-            $("#products-carousel").carousel('cycle');
-        }
-    );
-
-    // verification before submit
-    $("#contact-form").submit(function (e) {
-        if ($('#firstname-field').val() && $('#lastname-field').val() && $('#mail-field').val()
-            && $('#product-field').val() != "-1") {
-
-            var mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if (!mail_regex.test($('#mail-field').val())) {
-                error_msg = "L'e-mail renseigné n'a pas un format valide.";
-                $('#error-message').text(error_msg);
-                e.preventDefault();
-            }
-        }
-        // avoid to execute the actual submit of the form.
-        else {
-            error_msg = "Veuillez au minimum cocher un produit, ainsi que remplir les champs marqués d'une astérisque (*).";
-            $('#error-message').text(error_msg);
-            e.preventDefault();
-        }
-    });
+//    var error_msg = '';
+//
+//    $('#bf-modal').modal({'backdrop': 'true'});
+//    $('.modal-footer').slideDown();
+//
+//    $('#products-carousel').carousel({interval: 10000}).on('slide.bs.carousel', function (e) {
+//        var nextH = $(e.relatedTarget).height();
+//        $(this).find('.active.item').parent().animate({height: nextH}, 500);
+//
+//        if ($('#black-friday-slide').hasClass('active')) {
+//            $('.modal-footer').slideUp();
+//        }
+//
+//    });
+//
+//    $('#products-carousel').on('slid.bs.carousel', function () {
+//        if ($('#contact-slide').hasClass('active'))
+//            $('#products-carousel').carousel('pause');
+//
+//        if ($('#black-friday-slide').hasClass('active')) {
+//            $('.modal-footer').addClass('visible');
+//        } else {
+//            $('.modal-footer').removeClass('visible');
+//        }
+//
+//        if ($('#black-friday-slide').hasClass('active')) {
+//            $('.modal-footer').slideDown();
+//        }
+//    });
+//
+//    $('#bf-modal .modal-dialog').hover(
+//        function () {
+//            $("#products-carousel").carousel('pause');
+//        },
+//        function () {
+//            $("#products-carousel").carousel('cycle');
+//        }
+//    );
+//
+//    // verification before submit
+//    $("#contact-form").submit(function (e) {
+//        if ($('#firstname-field').val() && $('#lastname-field').val() && $('#mail-field').val()
+//            && $('#product-field').val() != "-1") {
+//
+//            var mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//            if (!mail_regex.test($('#mail-field').val())) {
+//                error_msg = "L'e-mail renseigné n'a pas un format valide.";
+//                $('#error-message').text(error_msg);
+//                e.preventDefault();
+//            }
+//        }
+//        // avoid to execute the actual submit of the form.
+//        else {
+//            error_msg = "Veuillez au minimum cocher un produit, ainsi que remplir les champs marqués d'une astérisque (*).";
+//            $('#error-message').text(error_msg);
+//            e.preventDefault();
+//        }
+//    });
 </script>

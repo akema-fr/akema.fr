@@ -1,0 +1,617 @@
+/*Polices de la page*/
+@font-face{
+	font-family: LatoL;
+	src: url('../fonts/Lato-Light.ttf');
+}
+
+@font-face{
+	font-family: LatoR;
+	src: url('../fonts/Lato-Regular.ttf');
+}
+
+@font-face{
+	font-family: PoiretOne;
+	src: url('../fonts/PoiretOne-Regular.ttf');
+}
+
+@font-face{
+	font-family: Roboto;
+	src: url('../fonts/RobotoCondensed-Light.ttf');
+}
+
+html {
+  padding: 0;
+  margin : 0;
+  width : 100%;
+}
+
+body{
+  padding: 0;
+  margin : 0;
+  width : 100%;
+  overflow-x : hidden;
+}
+
+.nomargin{
+  margin-right: unset !important;
+}
+
+#blocpage{
+}
+
+/*Header de la page*/
+#titre_principal{
+  width: 100%;
+  color: white;
+}
+
+header{
+  padding-bottom: 1%;
+	background: url('../assets/bordeaux.jpg') 0 1000px;
+  background-size: 100%;
+  background-position: 0 0;
+}
+
+
+/*Logo Akema*/
+#logo{
+	padding-left: 1.8%;
+	padding-top: 0.8%;
+}
+
+
+#logo h1{
+	font-family: Roboto;
+	font-weight: 200;
+}
+
+.logocss{
+	max-height: 60px;
+}
+
+/*Logos des réseaux sociaux*/
+.resosimg{
+  width: 35px;
+  height: 35px;
+  margin: 10px 5px;
+}
+
+
+h5.italic{
+	font-style: italic;
+}
+
+.menu {
+	background: #070e67;
+  margin-right: 0;
+}
+
+.barremenu {
+	margin: 0 auto;
+	background: #070e67;
+	border-radius: 0;
+	text-align: center;
+	width: 100%;
+	height : 2%;
+	list-style-type : none !important;
+  transition: 0.4s;
+}
+
+.barremenu li{
+	display : inline-block;
+	padding : 0.8% 3%;
+  transition: 0.4s;
+}
+
+.barremenu li a{
+	color: white ;
+	font-family: LatoR;
+	text-decoration : none;
+	outline : none;
+}
+
+.barremenu li a:hover{
+	color: white ;
+	background: #1d257c;
+	text-decoration : none;
+	outline : none;
+}
+
+.barremenu li a:visited,
+.barremenu li a:active {
+	text-decoration : none;
+	outline : none;
+}
+
+.barremenu li:hover{
+	background: #1d257c;
+}
+
+/*Correspond à tous les éléments fixés sur la page (ici uniquement le bouton "haut de page")*/
+.fixed {
+	position: fixed;
+  bottom: 0;
+	right: 20px;
+	z-index : 99;
+	margin-bottom: 2%;
+}
+
+/*Bouton "haut de page"*/
+.hautpage {
+  width: 50%;
+}
+/*Correspond au corps de la page (apres la barre de nav)*/
+#corps{
+	background:whiteSmoke;
+	font-family: LatoR;
+}
+
+#corps h4 {
+	margin: 2% 5%;
+}
+
+.accordeon{
+	background: #c9c9c9;
+	cursor : pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+}
+
+.actif, .accordeon:hover{
+	background: #adadad;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+.accordeon:after{
+	content: "\002B";
+	color: #777;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.actif:after{
+	content: "\2212";
+}
+
+.texte{
+	padding: 0 18px;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+  font-size: 15px;
+}
+
+#firstp{
+  display: block !important;
+}
+
+.texte img{
+  text-align: center;
+  margin-top:2%;
+}
+
+.texte ul{
+  list-style-type : square !important;
+  padding : 0 15%
+}
+
+.texte p{
+	margin: 0 10%;
+}
+
+#reference{
+	font-family: PoiretOne;
+}
+
+
+/*Correspond à l'ensemble des images "Nos références"*/
+.img-container{
+	float: left;
+	padding: 5px;
+}
+
+#img1{
+	background: url(../assets/aeroport_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img1:hover{
+  background: url(../assets/aeroport.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img2{
+	background: url(../assets/coaxis_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img2:hover{
+  background: url(../assets/coaxis.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img3{
+	background: url(../assets/touton_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img3:hover{
+  background: url(../assets/touton.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img4{
+	background: url(../assets/logoAme_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img4:hover{
+  background: url(../assets/logoAme.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img5{
+	background: url(../assets/clairsienne_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img5:hover{
+  background: url(../assets/clairsienne.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img6{
+	background: url(../assets/BMS_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img6:hover{
+  background: url(../assets/BMS.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img7{
+	background: url(../assets/logo_400x400_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+
+#img7:hover{
+  background: url(../assets/logo_400x400.png) center center no-repeat;
+  background-size: 100%;
+}
+
+#img8{
+	background: url(../assets/dekra_gris.png) center center no-repeat;
+	background-size: 100%;
+  height: 10em;
+  transition:0.2s;
+}
+
+#img8:hover{
+  background: url(../assets/dekra.png) center center no-repeat;
+  background-size: 100%;
+}
+
+/*Sert à diminuer la taille des images et leur donner une taille à peu près équivalente*/
+img.resize {
+	width:70%;
+	height: auto;
+}
+
+/*Sert à centrer certains h1*/
+h1.center{
+	text-align: center;
+}
+
+/*Correspond à la partie devis du corps de la page*/
+#devis{
+	text-align: center;
+	margin-top: 5%;
+	font-family: PoiretOne;
+	margin-bottom: 3%
+}
+
+/*Correspond à l'encadré du numéro*/
+#numero{
+	background: #284094;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	margin-top: 15px;
+	width: 300px;
+	border-radius: 15px;
+	color: white;
+}
+
+/*Correspond à la partie footer de la page*/
+#footer,
+#bureaux,
+#contact,
+#localisation{
+	color: white;
+	background-color : #284094;
+	margin : 0;
+}
+
+#footer {
+	padding-bottom: 5%;
+}
+
+#bureaux p{
+	margin-bottom: 0 !important;
+}
+
+/*Correspond au paragraphe de l'adresse des locaux*/
+#bureaux{
+	text-align: center;
+	padding-top: 10px;
+	font-family: LatoR;
+}
+
+#bureaux h2{
+	font-family: PoiretOne;
+}
+
+/*Correspond à la partie du formulaire*/
+#contact{
+	color: black;
+}
+
+/*Correspond à la phrase "Nous joindre par mail"*/
+#contactid{
+	color: white;
+	font-family: PoiretOne;
+}
+
+/*Correspond au formulaire*/
+#formu{
+	margin-top: 30px;
+  text-align: center;
+}
+
+/*Sert à empecher l'utilisateur de modifier la taille de la textarea*/
+textarea{
+	resize: none;
+}
+
+/*Correspond à la partie "Nous sommes près de chez vous"*/
+#localisation{
+	font-family: PoiretOne;
+
+}
+
+h2.center{
+	text-align: center;
+  margin-bottom: 20px;
+}
+
+/*Correspond à la carte Google Maps*/
+#map{
+	width: 500px;
+	height: 350px;
+  text-align: center;
+  margin: auto;
+
+}
+
+.mentions{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: LatoR;
+}
+
+.mentions a{
+  color: white;
+}
+
+.mentions a:hover{
+  color: white;
+}
+
+@media all and (min-width: 1200px){
+  header{
+    padding-bottom:370px ;
+  }
+
+  #logo {
+    float: left;
+  }
+
+	#logo h1{
+		font-size: 2em;
+    text-align: left;
+	}
+
+  .menu {
+    display : block;
+  }
+
+  .logocss{
+    max-height: 60px;
+  }
+
+  #fb,
+  #lkd,
+  #twitter{
+
+  }
+
+}
+
+@media all and (min-width: 992px) and (max-width: 1200px){
+	header{
+    padding-bottom:200px ;
+  }
+
+  #logo h1{
+		font-size: 1.8em ;
+    text-align: left;
+	}
+
+
+  #resos{
+    float:right;
+  }
+
+  .menu {
+    display : block;
+  }
+
+  .logocss{
+    max-height: 60px;
+  }
+
+  #fb,
+  #lkd,
+  #twitter{
+    background-size: auto;
+    -webkit-background-size: auto;
+    moz-background-size: auto;
+  }
+
+  #map{
+    width: 600px;
+    height: 450px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  #logo {
+    clear: left;
+    text-align: center;
+  }
+
+	#logo h1{
+		font-size: 1.5em ;
+    text-align: center;
+	}
+
+  .menu {
+    display : none;
+    visibility: hidden;
+  }
+
+  .barremenu{
+    display: none;
+    visibility: hidden;
+  }
+
+  #resos{
+    text-align:center;
+    clear:right;
+  }
+
+  .logocss{
+    max-height: 40px;
+  }
+
+  #fb,
+  #lkd,
+  #twitter{
+
+  }
+
+}
+
+@media all and (min-width: 576px) and (max-width: 767px){
+  #logo {
+    clear: left;
+    text-align: center;
+  }
+
+	#logo h1{
+		font-size: 1.3em ;
+    text-align: center;
+	}
+
+  .menu {
+    display : none;
+  }
+
+  .barremenu{
+    display: none;
+  }
+
+  .logocss{
+    max-height: 30px;
+  }
+
+  #resos{
+    text-align:center;
+    clear:right;
+  }
+
+  #fb,
+  #lkd,
+  #twitter{
+
+  }
+}
+
+@media all and (max-width: 575px){
+  header{
+    background: #070e67;
+  }
+
+  #logo {
+    clear: left;
+    text-align: center;
+  }
+
+	#logo h1{
+		font-size: 1em ;
+    text-align: center;
+	}
+
+
+  .menu {
+    display : none;
+  }
+
+  .barremenu{
+    display: none;
+  }
+
+  .logocss{
+    max-height: 20px;
+  }
+
+  #resos{
+    text-align:center;
+    clear:right;
+  }
+
+  #map{
+    width: 300px;
+    height: 200px;
+  }
+
+  input, textarea{
+    width: 75%;
+  }
+}
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Akema - Produits</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+    <div id="headerpro"></div>
+    <div>
+      <a href="index.html"><img class="logocss" src="assets/logo_akema.png" alt="Logo Akema"/></a>
+      <h1 class="white" id="titrelogo">Expert en transformation digitale</h1>
+    </div>
+
+    <div class="row menu2 nomargin" id="burger-content">
+      <nav>
+        <ul class="barremenu nomargin">
+          <li><a href="index.html#presentation">AKEMA</a></li>
+          <li><a href="produits.html">NOS PRODUITS</a></li>
+          <li><a href="index.html#reference">NOS RÉFÉRENCES</a></li>
+          <li><a href="opportunites.html">NOS OPPORTUNITÉS</a></li>
+          <li><a href="index.html#contactid">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <button id="burger-button">☰</button>
+
+    <div id="burger-sidebar">
+      <div id="burger-sidebar-header"></div>
+      <div id="burger-sidebar-body"></div>
+    </div>
+
+    <div id="burger-overlay"></div>
+
+    <script>
+      let content = document.getElementById('burger-content');
+      let sidebarBody = document.getElementById('burger-sidebar-body');
+      let button = document.getElementById('burger-button');
+      let overlay = document.getElementById('burger-overlay');
+      let activatedClass = 'burger-activated';
+      let classToRemove = 'barremenu';
+
+      sidebarBody.innerHTML = content.innerHTML;
+
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        this.parentNode.classList.add(activatedClass);
+
+        document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.remove(classToRemove);
+      });
+
+      button.addEventListener('keydown', function(e) {
+        if (this.parentNode.classList.contains(activatedClass))
+        {
+          if (e.repeat === false) {
+            this.parentNode.classList.remove(activatedClass);
+            document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+          }
+        }
+      });
+
+      overlay.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        this.parentNode.classList.remove(activatedClass);
+        document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+      });
+      </script>
+
+      <div id="corps" class="container">
+        <h2 id="titre-prod">Nos produits</h2>
+
+        <div class="row nomargin prod-row">
+          <div class="col-lg-3 center">
+            <img src="assets/11h42.png" class="test" alt="11h42">
+          </div>
+
+          <div class="col-lg-6">
+            <h3>11h42</h3>
+            <p>Accélérateur de projets numériques à Bordeaux<br><br>Conjuguons nos talents pour réaliser vos rêves !</p>
+          </div>
+
+          <div class="col-lg-3">
+            <a href="http://11h42.com/" target="_blank">Voir le site web</a>
+            <a href="assets/Plaquette%20commerciale%20-%202%20pages%20-%2011h42.pdf" download="Plaquette_11h42">Télécharger plaquettes</a>
+          </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row nomargin prod-row">
+          <div class="col-lg-3 center">
+            <img src="assets/apidae.png" class="test" alt="Apidae">
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Apidae</h3>
+            <p>Solution "Digitale RH"<br><br>Managez vos ressources en toute simplicité !</p>
+          </div>
+
+          <div class="col-lg-3">
+            <a href="http://apidae.biz/" target="_blank">Voir le site web</a>
+            <a href="assets/Plaquette%20commerciale%20-%202%20pages%20-%20Apidae.pdf" download="Plaquette_Apidae">Télécharger plaquettes</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row nomargin prod-row">
+          <div class="col-lg-3 center">
+            <img src="assets/akemail.png" class="test" alt="Akemail">
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Akemail</h3>
+            <p>Solution de "Masse Mailing"<br><br>Créez et gérez tous vos contacts, envoyez en illimité !</p>
+          </div>
+
+          <div class="col-lg-3">
+            <a href='https://akemail.fr/' target="_blank">Voir le site web</a>
+            <a href="assets/Plaquette%20commerciale%20-%202%20pages%20-%20Akemail.pdf" download="Plaquette_Akemail">Télécharger plaquettes</a>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row nomargin prod-row">
+          <div class="col-lg-3 center">
+            <img src="assets/acloud.png" class="test" alt="Acloud">
+          </div>
+
+          <div class="col-lg-6">
+            <h3>Acloud</h3>
+            <p>Solution de stockage en ligne sécurisé<br><br>Partagez vos données, échangez, collaborez de façon sécurisée et libérez-vous des contraintes informatiques.</p>
+          </div>
+
+          <div class="col-lg-3">
+            <a href="assets/Plaquette%20commerciale%20-%202%20pages%20-%20ACloud.pdf" download="Plaquette_Acloud">Télécharger plaquettes</a>
+          </div>
+        </div>
+
+      </div>
+
+    <div class="row center margin0" id="footer2">
+      <a href="#" id="hautPage">Haut de page</a><br><br>
+      <p class="mentions white"><a class="lato" href="mentions_legales.html">Mentions légales</a> - By Akema</p>
+    </div>
+
+</body>
+</html>

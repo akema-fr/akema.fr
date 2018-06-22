@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /assets/
+Disallow: /js/
+
+
+Sitemap: http://www.akema.fr/sitemap.xml

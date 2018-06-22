@@ -1,290 +1,424 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="width100 padding0 margin0">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Akema: Société de conseil en Ingénierie logiciel et Éditeur logiciel.</title>
-    <meta name="description" content="société de service de Bordeaux Métropole">
-
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/bootstrap/css/bootstrap.min.css">
-
-    <link rel="icon" type="image/png" href="favicon.png">
+  <title>Akema - Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <meta name="description" content="Akema est une SSII performante du groupe Trévise située à Bordeaux.">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body>
 
-<div id="header-container" class="gradient">
-    <header class="wrapper clearfix">
-        <a href="/index.html"><h1 id="title">Akema</h1></a>
-        <nav>
-            <ul>
-                <li><a href="/index.html" class="current">Accueil</a></li>
-                <li><a href="src/pages/apropos.html">Qui sommes-nous ?</a></li>
-                <li><a href="src/pages/offres.html">Nos offres</a></li>
-                <li><a href="src/pages/carriere.html">Votre Carrière</a></li>
-                <li><a href="src/pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
-<div id="main-container" class="wrapper clearfix">
-    <div id="main-info">
-        <a class="btn" href="tel:055-678-7250">05 56 78 72 50</a><br><a class="btn" href="mailto:contact@akema.fr">contact@akema.fr</a>
-    </div>
-    <div id="main-picture">
+<body onload="runSlider();" id="bodytest" class="width100 padding0 margin0">
+<div id="site-wrapper">
+<script>
+  function diaporama () {
 
-        <img src="src/images/home.jpg">
-    </div>
-    <!-- === BLACK FRIDAY MODAL === -->
-    <!--
-    <br/>
-    <div id="black-friday-button">
-        <h4>À l'occasion du Black Friday,<br />
-            découvrez des promotions sur nos produits jusqu'à <b>-75%</b> !</h4>
-        <br/>
-        <button href="#bf-modal" data-toggle="modal">Découvrir les offres Black Friday !</button>
-    </div>
-    !-->
-    <!-- ========================== -->
+    if (indice === max-1) indice = 0;
+    else indice ++;
+    image = slides[indice];
+
+    let elmt = document.getElementById("slider");
+
+    elmt.style.background="url(" + image + ") center center no-repeat";
+    elmt.style.backgroundSize = "100%";
+  }
 
 
-</div>
+  function runSlider()
+  {
+    let elmt = document.getElementById("slider");
 
-<div id="footer-container">
-    <footer class="wrapper">
-        © 2012-2016 <a href="http://akema.fr">Akema SAS</a>
-        - <a href="src/pages/informations_legales.html">Informations légales</a>
-        - <a href="//akema.apidae.biz">Espace Consultants</a>
-    </footer>
+    elmt.style.background="url('assets/Pont_Chaban.jpg') center center no-repeat";
+    elmt.style.backgroundSize = "100%";
+
+    setInterval('diaporama();',8000);
+  }
+
+  let slides = ["assets/Arcachon2.jpg", "assets/portlune.jpg", "assets/pontpierre.jpg" , "assets/architecture.jpg","assets/Pont_Chaban.jpg"];
+  let max = slides.length;
+  let indice = 0;
+
+</script>
+
+<header id="slider">
+  <div class="row width100" id="titre_principal">
+  </div>
+</header>
+
+<div>
+  <a href="index.html"><img class="logocss" src="assets/logo_akema.png" alt="Logo Akema"/></a>
+  <h1 class="white" id="titrelogo" >Expert en transformation digitale</h1>
 </div>
 
-<!-- === BLACK FRIDAY MODAL === -->
-<!--
-<div id="bf-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+  <div class="row menu nomargin" id="burger-content">
+    <nav>
+      <ul class="barremenu nomargin width100">
+        <li><a href="#presentation" class="lato" onclick="closeSidebar()">AKEMA</a></li>
+        <li><a href="produits.html" class="lato">NOS PRODUITS</a></li>
+        <li><a href="#reference" class="lato" onclick="closeSidebar()">NOS RÉFÉRENCES</a></li>
+        <li><a href="opportunites.html" class="lato">NOS OPPORTUNITÉS</a></li>
+        <li><a href="#contactid" class="lato" onclick="closeSidebar()">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
 
-            <div class="modal-header row">
-                <div class="smoke-div"></div>
-                <img class="col-xs-12 col-sm-6" src="src/images/black-friday/logo-akema.png" alt="Logo Akema"
-                     id="logo-akema" data-target="#products-carousel" data-slide-to="0">
+  <button id="burger-button" class="white">☰</button>
 
-                <div id="products-logo-div" class="col-xs-12 col-sm-6">
-                    <div style="height: 15px;" class="visible-xs"></div>
-                    <img data-target="#products-carousel" data-slide-to="1"
-                         src="src/images/black-friday/apidae_logo_sale.png" alt="Logo Apidae" class="product-logo col-xs-4">
-                    <img data-target="#products-carousel" data-slide-to="2" src="src/images/black-friday/logo_akemail_sale.png"
-                         alt="Logo Akemail" class="product-logo col-xs-4">
-                    <img data-target="#products-carousel" data-slide-to="3"
-                         src="src/images/black-friday/akloud_logo_sale.png" alt="Logo Akloud" class="product-logo col-xs-4">
-                </div>
+
+  <div id="burger-sidebar" class="white">
+    <div id="burger-sidebar-header"></div>
+    <div id="burger-sidebar-body"></div>
+  </div>
+
+  <div id="burger-overlay" class="width100"></div>
+
+  <script>
+    let content = document.getElementById('burger-content');
+    let sidebarBody = document.getElementById('burger-sidebar-body');
+    let button = document.getElementById('burger-button');
+    let overlay = document.getElementById('burger-overlay');
+    let activatedClass = 'burger-activated';
+    let classToRemove = 'barremenu';
+
+    sidebarBody.innerHTML = content.innerHTML;
+
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      this.parentNode.classList.add(activatedClass);
+
+      document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.remove(classToRemove);
+    });
+
+    button.addEventListener('keydown', function(e) {
+      if (this.parentNode.classList.contains(activatedClass))
+      {
+        if (e.repeat === false) {
+          this.parentNode.classList.remove(activatedClass);
+          document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+        }
+      }
+    });
+
+    overlay.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      this.parentNode.classList.remove(activatedClass);
+      document.getElementById('burger-sidebar-body').getElementsByTagName('ul')[0].classList.add(classToRemove);
+    });
+
+
+    //Fonction pour fermer la sidebar lorsque l'on clique sur un lien
+    function closeSidebar(){
+      document.getElementById('site-wrapper').classList.remove(activatedClass);
+    }
+
+
+    /*
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("btnHaut").style.display = "block";
+        } else {
+            document.getElementById("btnHaut").style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }*/
+  </script>
+
+  <div id="corps" class="lato">
+    <div class="row">
+
+      <div class="tab center" id="presentation">
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
+          <button class="accordeon" id='openDefault' onclick="openTab(event,'akema')">QUI SOMMES-NOUS ?</button>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
+          <button class="accordeon" onclick="openTab(event,'agile')">NOTRE STRATÉGIE</button>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
+          <button class="accordeon" onclick="openTab(event,'pole')" >NOS PÔLES D'EXPERTISE</button>
+        </div>
+
+      </div>
+
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="texte container" id="akema">
+          <h4 class="title">L'entreprise Akema, entité du groupe Trévise</h4>
+          <p>Créée en 2012 et installée en métropole bordelaise, <b>Akema</b> est une
+            société en plein essor. Attachée à l’idée d’être une <b>réelle
+              valeur ajoutée</b> pour nos clients, notre investissement va au-delà d’une
+            ESN classique : elle accompagne les directions informatiques dans le
+            cadre de leurs projets de transformation numérique.</p><br>
+          <p>Dirigée par <a href="https://www.linkedin.com/in/frederic-bernard-85436028/" target="_blank"><b>Frédéric Bernard</b></a>, elle revendique la force d'un groupe à taille
+            humaine mais également une relation de <b>confiance</b>
+            avec ses clients (respect, écoute et conseils), ses partenaires et collaborateurs.</p>
+          <p>Le marché du numérique poursuit sa <b>croissance</b>, explose et nécessite des compétences pointues et un engagement fort des différents acteurs. Chez Akema, nous sommes conscients de cela et nous sommes prêts à relever les défis les plus fous...<br><br></p>
+          <br>
+
+          <div class="container" id="containerAkema">
+            <div class="diapo-left width100 padding0 center row">
+              <img src="assets/differents.jpg" alt="Akema inside"/>
+
+              <div class="center left-right">
+              <ul>
+                <li class="roboto">Tous différents !</li>
+              </ul>
+                <p>Akema, c'est aussi l'histoire d'une <b>équipe passionnée</b> par les métiers du digital. Elle apporte, grâce à des compétences variées et complémentaires, une plus-value à votre <b>stratégie d'entreprise</b>.<br>
+                  Même si chacun doit et sait garder ses passions et sa personnalité propre, talents, expertise, curiosité et partage sont les points communs de nos ingénieurs d'affaires, responsables RH, commerciaux et développeurs.</p>
+              </div>
             </div>
 
-            <div class="modal-body">
-                <div id="products-carousel" class="carousel slide" data-ride="carousel">
-
-                    <div class="carousel-inner">
-                        <div class="item slide active" id="black-friday-slide">
-                            <h1>Offres Spéciales !</h1>
-                            <img class="col-xs-offset-2 col-xs-10 col-lg-offset-2"
-                                 src="src/images/black-friday/black_friday.png">
-                        </div>
-
-                        <div class="item slide" id="apidae-slide">
-                            <img src="src/images/black-friday/1%20image%20-%20APIDAE.PNG" alt="Apidae">
-                            <h3 class="offer-catchphrase"><span class="offer-price">-75%</span> pendant 3 mois!
-                                <br/>
-                                <a data-target="#products-carousel" data-slide-to="4">Informations et devis </a>
-                                ou
-                                <span class="product-site-link"><a href="http://www.apidae.biz"> plus de détails sur apidae.biz</a></span>
-                            </h3>
-                        </div>
-
-                        <div class="item slide" id="akemail-slide">
-                            <img src="src/images/black-friday/1%20image%20-%20AKEMAIL.PNG" alt="Akemail">
-                            <h3 class="offer-catchphrase"><span class="offer-price">-75%</span> pendant 3 mois!<br/>
-                                <a data-target="#products-carousel" data-slide-to="4">Informations et devis </a>
-                                ou
-                                <span class="product-site-link"><a href="http://www.akemail.fr"> plus de détails sur akemail.fr</a></span>
-                            </h3>
-                        </div>
-
-                        <div class="item slide" id="akloud-slide">
-                            <img src="src/images/black-friday/1%20image%20-Akloud.PNG" alt="Akloud">
-                            <h3 class="offer-catchphrase"><span class="offer-price">-50%</span> pendant 3 mois!
-                                <br/>
-                                <a data-target="#products-carousel" data-slide-to="4">Informations et devis</a>
-                            </h3>
-                        </div>
-
-                        <div class="item slide" id="contact-slide">
-                            <h3>Mélanie se fera un plaisir de vous faire une démonstration en direct.</h3>
-                            <form action="http://formspree.io/" method="post"
-                                  id="contact-form">
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="product-field">Produit *: </label><br class="hidden-xs"/>
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <select type="text" id="product-field" name="Product">
-                                            <option value="-1">Choisissez un produit...</option>
-                                            <option value="Apidae">Apidae</option>
-                                            <option value="Akemail">Akemail</option>
-                                            <option value="Akloud">Akloud</option>
-                                        </select><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="company-field">Entreprise : </label><br class="hidden-xs"/>
-
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <input type="text" id="company-field" name="company"><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="lastname-field">Nom *: </label><br class="hidden-xs"/>
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <input type="text" id="lastname-field" name="lastname"><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="firstname-field">Prénom *: </label><br class="hidden-xs"/>
-
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <input type="text" id="firstname-field" name="firstname"><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="mail-field">E-mail *: </label><br class="hidden-xs"/>
-
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <input type="text" id="mail-field" name="e-mail"><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="phone-field">Téléphone : </label><br class="hidden-xs"/>
-
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <input type="text" id="phone-field" name="phone"><br/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-11 col-xs-offset-1 col-sm-offset-2 col-sm-2">
-                                        <label for="msg-field">Message : </label><br class="hidden-xs"/>
-
-                                    </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-7 col-sm-offset-0">
-                                        <textarea id="msg-field" style="margin-bottom: 0 !important;"
-                                                  name="message"></textarea><br/>
-                                    </div>
-                                </div>
-
-                                <br/>
-                                <p style="color: #b92c28" id="error-message"></p>
-                                <br/>
-                                <input type="submit" style="width: auto !important; color: black" value="Envoyer"/>
-                            </form>
-                        </div>
-
-
-                        <a class="left carousel-control" href="#products-carousel" data-slide="prev" style="color: white">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#products-carousel" data-slide="next" style="color: white">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
+           <div class="diapo-right width100 padding0 center row">
+              <ul>
+                <li class="roboto">Soudés,</li>
+                <li class="roboto">Complémentaires,</li>
+                <li class="roboto">Engagés,</li>
+                <li class="roboto">Passionnés...</li>
+              </ul>
+              <img src="assets/soudes.jpg" alt="Akema inside"/>
             </div>
 
+            <div class="diapo-left width100 padding0 center row">
+              <img src="assets/Akema6.jpg" alt="Akema autour"/>
 
-            <div class="modal-footer">
-                <a href="#bf-modal" data-toggle="modal">Continuer vers Akema.fr</a>
+              <div class="left-right">
+                <ul>
+                  <li class="roboto">Ouverts !</li>
+                </ul>
+
+                <p>De part nos partenariats avec des grandes écoles, nous recevons régulièrement au sein de nos équipes des juniors, en alternance ou en stage.
+                  Nous faisons en sorte qu'ils se sentent bien chez Akema, et nous y parvenons dans la majorité des cas, puisque le contact avec ces jeunes perdurent même après leur période de travail chez nous.</p><br>
+              </div>
             </div>
+        </div>
 
         </div>
+
+        <div class="texte container" id="agile">
+          <h4 class="title">Nos objectifs</h4>
+          <p>Renforcer notre présence auprès de nos clients et prospects</p>
+          <ul>
+            <li>Consolider via de nouveaux collaborateurs,</li>
+            <li>Limiter la sous-traitance,</li>
+            <li>Proposer des interventions forfaitisées.</li>
+            <li>Fidéliser nos clients.</li>
+          </ul>
+
+          <p>Renforcer notre relation avec les acteurs locaux</p>
+          <ul>
+            <li>Accompagner nos partenaires sur leurs enjeux business et IT,</li>
+            <li>Intégrer les écoles au plus près de nos activités.</li>
+            <li>S'investir et s'impliquer dans l'économie numérique locale et régionale.</li>
+          </ul>
+
+          <p>Développer et proposer notre offre logicielle</p>
+          <ul>
+            <li><a href="https://akemail.fr/" target="_blank">AKEMAIL</a></li>
+            <li><a href="http://apidae.biz/" target="_blank">APIDAE</a></li>
+            <li>ACLOUD</li>
+            <li>Solutions anti-contrefaçons et traçabilité</li>
+            <li>Innovations (langages, méthodes, protocoles d'échanges, IoT...)</li>
+          </ul>
+
+          <p>Conjuger nos talents et vous accompagner dans vos projets</p>
+          <ul>
+            <li><a href="http://11h42.com/" target="_blank">11H42.com, accélérateur de vos projets numériques.</a></li>
+          </ul>
+
+          <h4 class="title">Nous sommes Agile !</h4>
+          <p>Pour plus de flexibilité, d'adaptabilité, d'efficacité, nous pratiquons la méthode SCRUM au sein d'Akema.</p>
+          <ul>
+            <li>Itérations courtes,</li>
+            <li>Livraisons fréquantes de logiciels opérationnels,</li>
+            <li>Feedback permanent,</li>
+            <li>Amélioration continue,</li>
+            <li>Renforcement de l'esprit d'équipe,</li>
+            <li>Satisfaction client.</li>
+          </ul>
+
+          <h4 class="title">Ce que nous proposons à nos futurs collaborateurs</h4>
+          <ul>
+            <li>Accompagnement, formation, évolution,</li>
+            <li>Ambiance et locaux de travail chaleureux,</li>
+            <li>Missions valorisantes et épanouissantes,</li>
+            <li>Participation aux meetups, forums, hackathons, conférences...</li>
+          </ul>
+          <br>
+
+          <div><img class="img-responsive center-block" src="assets/agile.png" alt="Agile"/></div>
+        </div>
+
+        <div class="texte container" id="pole">
+          <h4 class="title">Pôles d'activité</h4>
+          <p>Akema, ce sont cinq pôles d’activités afin de pouvoir accompagner au mieux vos projets et satisfaire pleinement vos attentes : </p>
+            <ul>
+              <li><b>Akema Consulting :</b> Conseil en stratégie autour du SI.</li>
+              <li><b>Akema IT :</b> Assistance à maitrise d’ouvrage et d’œuvre.</li>
+              <li><b>Akema Ex-Situ :</b> Réalisation et TMA externalisée.</li>
+              <li><b>Akema Système & Réseaux :</b> Exploitation et Gestion de la production SI.</li>
+              <li><b>Akema Centre de Services :</b> Services dédiés, TDD, expertise Open source.</li>
+            </ul>
+
+          <p>Dans l’optique d'être le plus pertinent possible, Akema réserve une partie du temps de ses équipes à la veille technologique.
+            Ces nouvelles technologies sont testées et éprouvées au sein du <b>AKE'Lab</b> pour en valider l’utilité et permettre aux équipes de prendre en main ces nouveaux outils.</p>
+          <h4 class="title">Expertise Open Source</h4>
+          <p>Fort de notre expérience mise en œuvre via
+            Akema Ex-Situ, nos équipes excellent dans le domaine des logiciels libres
+            (Python, Django, Angular...). L’open source permet notamment de réduire les
+            coûts de production et facilite énormément la maniabilité de ces applications
+            métiers. Nous proposons également des Audits de Code, du transfert de
+            compétence et de la formation.</p>
+          <h4 class="title">Expertise TDD (Test Driven Development - Développement piloté par les tests)</h4>
+          <p>Akema propose son expertise avec une méthode de développement logiciel dans laquelle l’écriture du code source est dirigée par la rédaction
+            de tests automatisés.
+            Efficace afin de livrer des logiciels bien construits, Akema concentre ses
+            activités sur le <b>Conseil</b>, la <b>Formation</b> ainsi que sur sa mise en œuvre.
+            Nous serons ravis de vous démontrer que cette démarche
+            vous fait gagner en efficacité.</p><br>
+
+          <div><img class="img-responsive center-block" src="assets/python.jpg" alt="Python"></div>
+      </div>
+
+    </div>
+    </div>
+    <script>
+      function openTab(evt, tabName) {
+        // Declare all variables
+        let i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("texte");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("accordeon");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" actif", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " actif";
+      }
+
+     document.getElementById("openDefault").click();
+
+
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+
+      // Get the navbar, and the presentation div
+      let navbar = document.getElementById("burger-content");
+      let presentation = document.getElementById('presentation');
+
+      // Get the offset position of the navbar
+      let sticky = navbar.offsetTop;
+      window.onresize = function () {
+        sticky = navbar.offsetTop;
+      };
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+            presentation.classList.add("padding-top-45");
+        } else {
+            navbar.classList.remove("sticky");
+            presentation.classList.remove("padding-top-45");
+        }
+      }
+    </script>
+
+    <div class="row center" id="references">
+      <h1 id="reference" class="center col-xl-12 poiret">Nos références</h1><br><br>
+      <div class="hidden-sm hidden-xs visible-md visible-lg center">
+        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img1"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img2"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img3"></div>
+
+        <div class="img-container col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img4"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img5"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img6"></div>
+
+        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img7"></div>
+        <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img8"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img9"></div>
+
+        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img10"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img11"></div>
+        <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img12"></div>
+
+        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img13"></div>
+        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img14"></div>
+        <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img15"></div>
+      </div>
+
+      <img src="assets/logos.png" alt="logos références" id="referencetest" class="hidden-md visible-sm visible-xs center">
+    </div>
+
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 center poiret" id="devis">
+        <h3>Un devis ou une information ?</h3>
+        <h1>CONTACTEZ-NOUS</h1>
+        <div id="numero" class="white"><h1>05 56 78 72 50</h1></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="row margin0" id="footer">
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 margin0" id="contact">
+        <h2 class="center white poiret" id="contactid">Nous joindre</h2>
+        <form id="formu" class="center" onsubmit="validEmail()" action="https://formspree.io/%65&#110;&#122;%6f&#46;f%6fnt&#101;&#110;e%61u&#64;hotma%69l%2e&#102;%72" method="POST"> <!-- Changer l'adresse de destinataire et la crypter-->
+          <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
+          <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
+          <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
+          <textarea name="message" placeholder="Votre message" rows="8" cols="55" required></textarea><br><br>
+          <input type="submit" id="contact-form-submit" value="Envoyer">
+        </form>
+      </div>
+
+      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white margin0 lato" id="bureaux">
+        <h2 class="center poiret">Nos bureaux</h2>
+        <p>Akema SAS<br>
+          54 rue Gustave Eiffel<br>
+          33610 Canéjan,<br>
+          France<br>
+          Tel : 05 56 78 72 50<br>
+          Fax : 09 72 36 01 93</p>
+        <div id="resos">
+          <a target="_blank" href="https://www.facebook.com/Akema-428624867184777/"><div class="resosimg" id="fb"></div></a>
+          <a target="_blank" href="https://twitter.com/akema_fr?lang=fr"><div class="resosimg" id="twitter"></div></a>
+          <a target="_blank" href="https://fr.linkedin.com/company/akema"><div class="resosimg" id="lkd"></div></a>
+        </div>
+      </div>
+
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white margin0 poiret" id="localisation">
+        <h2 class="center">Nous sommes près de chez vous</h2>
+        <div id="map" class="center">
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsPq5xRnNOj-_ivwXj7yQJXwIl-ZSL9mY&callback=myMap"></script> <!-- Le lien Google Maps ne doit surtout pas être touché à moins de vouloir générer une nouvelle clé API (voir https://www.w3schools.com/graphics/google_maps_basic.asp) -->
+        </div>
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 white">
+        <p class="mentions lato center"><a class="white" href="mentions_legales.html">Mentions légales</a> - By Akema</p>
+      </div>
     </div>
 </div>
--->
-<!-- ========================== -->
-
-
 </body>
 </html>
-
-<script type="application/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="application/javascript" src="src/css/bootstrap/js/bootstrap.min.js"></script>
-<script type="application/javascript">
-//    var error_msg = '';
-//
-//    $('#bf-modal').modal({'backdrop': 'true'});
-//    $('.modal-footer').slideDown();
-//
-//    $('#products-carousel').carousel({interval: 10000}).on('slide.bs.carousel', function (e) {
-//        var nextH = $(e.relatedTarget).height();
-//        $(this).find('.active.item').parent().animate({height: nextH}, 500);
-//
-//        if ($('#black-friday-slide').hasClass('active')) {
-//            $('.modal-footer').slideUp();
-//        }
-//
-//    });
-//
-//    $('#products-carousel').on('slid.bs.carousel', function () {
-//        if ($('#contact-slide').hasClass('active'))
-//            $('#products-carousel').carousel('pause');
-//
-//        if ($('#black-friday-slide').hasClass('active')) {
-//            $('.modal-footer').addClass('visible');
-//        } else {
-//            $('.modal-footer').removeClass('visible');
-//        }
-//
-//        if ($('#black-friday-slide').hasClass('active')) {
-//            $('.modal-footer').slideDown();
-//        }
-//    });
-//
-//    $('#bf-modal .modal-dialog').hover(
-//        function () {
-//            $("#products-carousel").carousel('pause');
-//        },
-//        function () {
-//            $("#products-carousel").carousel('cycle');
-//        }
-//    );
-//
-//    // verification before submit
-//    $("#contact-form").submit(function (e) {
-//        if ($('#firstname-field').val() && $('#lastname-field').val() && $('#mail-field').val()
-//            && $('#product-field').val() != "-1") {
-//
-//            var mail_regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//            if (!mail_regex.test($('#mail-field').val())) {
-//                error_msg = "L'e-mail renseigné n'a pas un format valide.";
-//                $('#error-message').text(error_msg);
-//                e.preventDefault();
-//            }
-//        }
-//        // avoid to execute the actual submit of the form.
-//        else {
-//            error_msg = "Veuillez au minimum cocher un produit, ainsi que remplir les champs marqués d'une astérisque (*).";
-//            $('#error-message').text(error_msg);
-//            e.preventDefault();
-//        }
-//    });
-</script>

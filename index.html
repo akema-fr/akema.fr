@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr" class="width100 padding0 margin0">
+<html lang="fr">
 <head>
-  <title>Akema - Accueil</title>
-  <meta charset="UTF-8">
+  <title>Site Akema</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <meta name="description" content="Akema est une SSII performante du groupe Trévise située à Bordeaux.">
-  <meta property="og:title" content="Akema"/>
-  <meta property="og:url" content="http://www.akema.fr"/>
-  <meta property="og:image" content="assets/favicon.jpg"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <meta name="description" content="Akema est une entreprise du groupe Trévise créée en 2012 et située à Bordeaux.">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 
-<body onload="runSlider();" id="bodytest" class="width100 padding0 margin0">
-<div id="site-wrapper">
+<body onload="runSlider();" id="bodytest">
 <script>
   function diaporama () {
 
@@ -40,43 +37,43 @@
     setInterval('diaporama();',8000);
   }
 
-  let slides = ["assets/Arcachon2.jpg", "assets/portlune.jpg", "assets/pontpierre.jpg" , "assets/architecture.jpg","assets/Pont_Chaban.jpg"];
+  let slides = ["assets/Pont_Chaban.jpg", "assets/Arcachon2.jpg", "assets/Chateau_Bordeaux2.jpg"];
   let max = slides.length;
   let indice = 0;
-
 </script>
 
 <header id="slider">
-  <div class="row width100" id="titre_principal">
+  <div class="row" id="titre_principal">
   </div>
 </header>
 
-<div>
-  <a href="index.html"><img class="logocss" src="assets/logo_akema.png" alt="Logo Akema"/></a>
-  <h1 class="white" id="titrelogo" >Expert en transformation digitale</h1>
+<div class="">
+  <img class="logocss" src="assets/logo_akema.png" alt="Logo Akema"/>
+  <h1 class="h1 white" id="titrelogo"> Expert en transformation digitale</h1>
+
 </div>
 
   <div class="row menu nomargin" id="burger-content">
     <nav>
-      <ul class="barremenu nomargin width100">
-        <li><a href="#presentation" class="lato" onclick="closeSidebar()">AKEMA</a></li>
-        <li><a href="produits.html" class="lato">NOS PRODUITS</a></li>
-        <li><a href="#reference" class="lato" onclick="closeSidebar()">NOS RÉFÉRENCES</a></li>
-        <li><a href="opportunites.html" class="lato">NOS OPPORTUNITÉS</a></li>
-        <li><a href="#contactid" class="lato" onclick="closeSidebar()">CONTACT</a></li>
-      </ul>
+      <ul class="barremenu nomargin">
+        <li><a href="#presentation" onclick="closeSidebar()">AKEMA</a></li>
+        <li><a href="#reference" onclick="closeSidebar()">NOS REFERENCES</a></li>
+        <li><a href="">NOS OPPORTUNITES</a></li>
+        <li><a href="#contactid" onclick="closeSidebar()">CONTACT</a></li>
+    </ul>
     </nav>
   </div>
 
-  <button id="burger-button" class="white">☰</button>
+  <button id="burger-button">☰</button>
 
+  <button onclick="topFunction()" class="fixed" id="btnHaut"></button>
 
-  <div id="burger-sidebar" class="white">
+  <div id="burger-sidebar">
     <div id="burger-sidebar-header"></div>
     <div id="burger-sidebar-body"></div>
   </div>
 
-  <div id="burger-overlay" class="width100"></div>
+  <div id="burger-overlay"></div>
 
   <script>
     let content = document.getElementById('burger-content');
@@ -114,109 +111,75 @@
     });
 
 
+
+
     //Fonction pour fermer la sidebar lorsque l'on clique sur un lien
     function closeSidebar(){
-      document.getElementById('site-wrapper').classList.remove(activatedClass);
+      document.getElementById('bodytest').classList.remove(activatedClass);
     }
 
 
-    /*
+
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("btnHaut").style.display = "block";
-        } else {
-            document.getElementById("btnHaut").style.display = "none";
-        }
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("btnHaut").style.display = "block";
+    } else {
+    document.getElementById("btnHaut").style.display = "none";
+    }
     }
 
     function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }*/
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
   </script>
 
-  <div id="corps" class="lato">
+  <div id="corps">
     <div class="row">
 
       <div class="tab center" id="presentation">
 
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
-          <button class="accordeon" id='openDefault' onclick="openTab(event,'akema')">QUI SOMMES-NOUS ?</button>
+          <button class="accordeon" id='openDefault' onclick="openTab(event, 'akema')">QUI SOMMES-NOUS ?</button>
         </div>
 
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
-          <button class="accordeon" onclick="openTab(event,'agile')">NOTRE STRATÉGIE</button>
+          <button class="accordeon" onclick="openTab(event,'agile')">NOTRE STRATEGIE</button>
         </div>
 
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 center">
-          <button class="accordeon" onclick="openTab(event,'pole')" >NOS PÔLES D'EXPERTISE</button>
+          <button class="accordeon" onclick="openTab(event, 'pole')" >NOS POLES D'EXPERTISE</button>
         </div>
 
       </div>
 
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="texte container" id="akema">
-          <h4 class="title">L'entreprise Akema, entité du groupe Trévise</h4>
-          <p>Créée en 2012 et installée en métropole bordelaise, <b>Akema</b> est une
+        <div class="texte" id="akema">
+          <h4>L'entreprise Akema, entité du groupe Trévise</h4>
+          <p>Créée en 2012 et installée en métropole bordelaise, <b>AKEMA</b> est une
             société en plein essor. Attachée à l’idée d’être une <b>réelle
               valeur ajoutée</b> pour nos clients, notre investissement va au-delà d’une
             ESN classique : elle accompagne les directions informatiques dans le
             cadre de leurs projets de transformation numérique.</p><br>
           <p>Dirigée par <a href="https://www.linkedin.com/in/frederic-bernard-85436028/" target="_blank"><b>Frédéric Bernard</b></a>, elle revendique la force d'un groupe à taille
-            humaine mais également une relation de <b>confiance</b>
+            humaine mais également une relation particulière
             avec ses clients (respect, écoute et conseils), ses partenaires et collaborateurs.</p>
-          <p>Le marché du numérique poursuit sa <b>croissance</b>, explose et nécessite des compétences pointues et un engagement fort des différents acteurs. Chez Akema, nous sommes conscients de cela et nous sommes prêts à relever les défis les plus fous...<br><br></p>
-          <br>
+          <p>Akema, c'est aussi l'histoire d'une <b>équipe passionnée</b> par les métiers du
+            digital. Elle apporte, grâce à des compétences variées et complémentaires,
+            une plus-value à votre <b>stratégie d'entreprise</b>.<br>
 
-          <div class="container" id="containerAkema">
-            <div class="diapo-left width100 padding0 center row">
-              <img src="assets/differents.jpg" alt="Akema inside"/>
-
-              <div class="center left-right">
-              <ul>
-                <li class="roboto">Tous différents !</li>
-              </ul>
-                <p>Akema, c'est aussi l'histoire d'une <b>équipe passionnée</b> par les métiers du digital. Elle apporte, grâce à des compétences variées et complémentaires, une plus-value à votre <b>stratégie d'entreprise</b>.<br>
-                  Même si chacun doit et sait garder ses passions et sa personnalité propre, talents, expertise, curiosité et partage sont les points communs de nos ingénieurs d'affaires, responsables RH, commerciaux et développeurs.</p>
-              </div>
-            </div>
-
-           <div class="diapo-right width100 padding0 center row">
-              <ul>
-                <li class="roboto">Soudés,</li>
-                <li class="roboto">Complémentaires,</li>
-                <li class="roboto">Engagés,</li>
-                <li class="roboto">Passionnés...</li>
-              </ul>
-              <img src="assets/soudes.jpg" alt="Akema inside"/>
-            </div>
-
-            <div class="diapo-left width100 padding0 center row">
-              <img src="assets/Akema6.jpg" alt="Akema autour"/>
-
-              <div class="left-right">
-                <ul>
-                  <li class="roboto">Ouverts !</li>
-                </ul>
-
-                <p>De part nos partenariats avec des grandes écoles, nous recevons régulièrement au sein de nos équipes des juniors, en alternance ou en stage.
-                  Nous faisons en sorte qu'ils se sentent bien chez Akema, et nous y parvenons dans la majorité des cas, puisque le contact avec ces jeunes perdurent même après leur période de travail chez nous.</p><br>
-              </div>
-            </div>
+          <div><img class="img-responsive center-block" src="assets/IT.png" alt="Agile" id="img-agile"/></div>
         </div>
 
-        </div>
-
-        <div class="texte container" id="agile">
-          <h4 class="title">Nos objectifs</h4>
+        <div class="texte" id="agile">
+          <h4>Nos objectifs</h4>
           <p>Renforcer notre présence auprès de nos clients et prospects</p>
           <ul>
             <li>Consolider via de nouveaux collaborateurs,</li>
             <li>Limiter la sous-traitance,</li>
             <li>Proposer des interventions forfaitisées.</li>
-            <li>Fidéliser nos clients.</li>
           </ul>
 
           <p>Renforcer notre relation avec les acteurs locaux</p>
@@ -232,7 +195,6 @@
             <li><a href="http://apidae.biz/" target="_blank">APIDAE</a></li>
             <li>ACLOUD</li>
             <li>Solutions anti-contrefaçons et traçabilité</li>
-            <li>Innovations (langages, méthodes, protocoles d'échanges, IoT...)</li>
           </ul>
 
           <p>Conjuger nos talents et vous accompagner dans vos projets</p>
@@ -240,7 +202,7 @@
             <li><a href="http://11h42.com/" target="_blank">11H42.com, accélérateur de vos projets numériques.</a></li>
           </ul>
 
-          <h4 class="title">Nous sommes Agile !</h4>
+          <h4>Nous sommes Agile !</h4>
           <p>Pour plus de flexibilité, d'adaptabilité, d'efficacité, nous pratiquons la méthode SCRUM au sein d'Akema.</p>
           <ul>
             <li>Itérations courtes,</li>
@@ -251,42 +213,22 @@
             <li>Satisfaction client.</li>
           </ul>
 
-          <h4 class="title">Ce que nous proposons à nos futurs collaborateurs</h4>
-          <ul>
-            <li>Accompagnement, formation, évolution,</li>
-            <li>Ambiance et locaux de travail chaleureux,</li>
-            <li>Missions valorisantes et épanouissantes,</li>
-            <li>Participation aux meetups, forums, hackathons, conférences...</li>
-          </ul>
-          <br>
-
           <div><img class="img-responsive center-block" src="assets/agile.png" alt="Agile"/></div>
         </div>
 
-        <div class="texte container" id="pole">
-          <h4 class="title">Pôles d'activité</h4>
-          <p>Akema, ce sont cinq pôles d’activités afin de pouvoir accompagner au mieux vos projets et satisfaire pleinement vos attentes : </p>
-            <ul>
-              <li><b>Akema Consulting :</b> Conseil en stratégie autour du SI.</li>
-              <li><b>Akema IT :</b> Assistance à maitrise d’ouvrage et d’œuvre.</li>
-              <li><b>Akema Ex-Situ :</b> Réalisation et TMA externalisée.</li>
-              <li><b>Akema Système & Réseaux :</b> Exploitation et Gestion de la production SI.</li>
-              <li><b>Akema Centre de Services :</b> Services dédiés, TDD, expertise Open source.</li>
-            </ul>
-
-          <p>Dans l’optique d'être le plus pertinent possible, Akema réserve une partie du temps de ses équipes à la veille technologique.
-            Ces nouvelles technologies sont testées et éprouvées au sein du <b>AKE'Lab</b> pour en valider l’utilité et permettre aux équipes de prendre en main ces nouveaux outils.</p>
-          <h4 class="title">Expertise Open Source</h4>
+        <div class="texte" id="pole">
+          <h4>Expertise Open Source</h4>
           <p>Fort de notre expérience mise en œuvre via
-            Akema Ex-Situ, nos équipes excellent dans le domaine des logiciels libres
+            AKEMA Ex-Situ, nos équipes excellent dans le domaine des logiciels libres
             (Python, Django, Angular...). L’open source permet notamment de réduire les
             coûts de production et facilite énormément la maniabilité de ces applications
             métiers. Nous proposons également des Audits de Code, du transfert de
             compétence et de la formation.</p>
-          <h4 class="title">Expertise TDD (Test Driven Development - Développement piloté par les tests)</h4>
-          <p>Akema propose son expertise avec une méthode de développement logiciel dans laquelle l’écriture du code source est dirigée par la rédaction
+          <h4>Expertise TDD (Test Driven Development - Développement piloté par les
+            tests)</h4>
+          <p>AKEMA propose son expertise avec une méthode de développement logiciel dans laquelle l’écriture du code source est dirigée par la rédaction
             de tests automatisés.
-            Efficace afin de livrer des logiciels bien construits, Akema concentre ses
+            Efficace afin de livrer des logiciels bien construits, AKEMA concentre ses
             activités sur le <b>Conseil</b>, la <b>Formation</b> ainsi que sur sa mise en œuvre.
             Nous serons ravis de vous démontrer que cette démarche
             vous fait gagner en efficacité.</p><br>
@@ -319,63 +261,31 @@
       }
 
      document.getElementById("openDefault").click();
-
-
-      // When the user scrolls the page, execute myFunction
-      window.onscroll = function() {myFunction()};
-
-
-      // Get the navbar, and the presentation div
-      let navbar = document.getElementById("burger-content");
-      let presentation = document.getElementById('presentation');
-
-      // Get the offset position of the navbar
-      let sticky = navbar.offsetTop;
-      window.onresize = function () {
-        sticky = navbar.offsetTop;
-      };
-
-      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky");
-            presentation.classList.add("padding-top-45");
-        } else {
-            navbar.classList.remove("sticky");
-            presentation.classList.remove("padding-top-45");
-        }
-      }
     </script>
 
-    <div class="row center" id="references">
-      <h1 id="reference" class="center col-xl-12 poiret">Nos références</h1><br><br>
-      <div class="hidden-sm hidden-xs visible-md visible-lg center">
-        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img1"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img2"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img3"></div>
+    <div class="row" id="references">
+      <h1 id="reference" class="center col-xl-12">Nos références</h1><br><br>
+      <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img1"></div>
+      <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img2"></div>
+      <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img3"></div>
+      <div class="img-container col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img4"></div>
+      <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img5"></div>
+      <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img6"></div>
 
-        <div class="img-container col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img4"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img5"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img6"></div>
+      <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img7"></div>
+      <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img8"></div>
+      <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img9"></div>
+      <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img10"></div>
+      <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img11"></div>
+      <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img12"></div>
 
-        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img7"></div>
-        <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img8"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img9"></div>
-
-        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img10"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img11"></div>
-        <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img12"></div>
-
-        <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img13"></div>
-        <div class="img-container col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img14"></div>
-        <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img15"></div>
-      </div>
-
-      <img src="assets/logos.png" alt="logos références" id="referencetest" class="hidden-md visible-sm visible-xs center">
+      <div class="img-container col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img13"></div>
+      <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img14"></div>
+      <div class="img-container col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-4 col-xs-3 logoref" id="img15"></div>
     </div>
 
     <div class="row">
-      <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 center poiret" id="devis">
+      <div class="col-lg-offset-1 col-lg-10 col-lg-offset-1 center" id="devis">
         <h3>Un devis ou une information ?</h3>
         <h1>CONTACTEZ-NOUS</h1>
         <div id="numero" class="white"><h1>05 56 78 72 50</h1></div>
@@ -383,26 +293,28 @@
     </div>
   </div>
 
-    <div class="row margin0" id="footer">
-      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 margin0" id="contact">
-        <h2 class="center white poiret" id="contactid">Nous joindre</h2>
-        <form id="formu" class="center" onsubmit="validEmail()" action="https://formspree.io/%65&#110;&#122;%6f&#46;f%6fnt&#101;&#110;e%61u&#64;hotma%69l%2e&#102;%72" method="POST"> <!-- Changer l'adresse de destinataire et la crypter-->
+  <!--http://localhost:63342/akema.fr/index.html?_ijt=dj4u34tad3jof46svfgepfn7ur-->
+
+    <div class="row" id="footer">
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12" id="contact">
+        <h2 class="center white" id="contactid">Nous joindre par mail</h2>      
+        <form id="formu" onsubmit="validEmail()" action="https://formspree.io/&#114;e%63%72u&#116;%65%6d%65n%74&#64;&#97;&#107;&#101;&#109;a%2e%66%72" method="POST">
           <input type="text" name="nom" placeholder="Votre nom" size="55" required><br><br>
           <input type="email" placeholder="Votre email" id="user-email" size="55" required><br><br>
           <input type="text" name="sujet" placeholder="Sujet" size="55" required><br><br>
-          <textarea name="message" placeholder="Votre message" rows="8" cols="55" required></textarea><br><br>
+          <textarea name="message" placeholder="Votre message" rows="8" cols="54" required></textarea><br><br>
           <input type="submit" id="contact-form-submit" value="Envoyer">
+          <p id="masque">Veuillez rentrer une adresse mail valide...</p>
         </form>
       </div>
 
-      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white margin0 lato" id="bureaux">
-        <h2 class="center poiret">Nos bureaux</h2>
-        <p>Akema SAS<br>
-          54 avenue Gustave Eiffel<br>
+      <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12 center white" id="bureaux">
+        <h2 class="center">Nos bureaux</h2>
+        <p>AKEMA SAS<br>
+          54 rue Gustave Eiffel<br>
           33610 Canéjan,<br>
           France<br>
-          Tel : 05 56 78 72 50<br>
-          Fax : 09 72 36 01 93</p>
+          Tel : 05 56 78 72 50<br></p>
         <div id="resos">
           <a target="_blank" href="https://www.facebook.com/Akema-428624867184777/"><div class="resosimg" id="fb"></div></a>
           <a target="_blank" href="https://twitter.com/akema_fr?lang=fr"><div class="resosimg" id="twitter"></div></a>
@@ -410,16 +322,16 @@
         </div>
       </div>
 
-      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white margin0 poiret" id="localisation">
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 white" id="localisation">
         <h2 class="center">Nous sommes près de chez vous</h2>
-        <div id="map" class="center">
+        <div id="map">
           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsPq5xRnNOj-_ivwXj7yQJXwIl-ZSL9mY&callback=myMap"></script> <!-- Le lien Google Maps ne doit surtout pas être touché à moins de vouloir générer une nouvelle clé API (voir https://www.w3schools.com/graphics/google_maps_basic.asp) -->
         </div>
       </div>
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 white">
-        <p class="mentions lato center"><a class="white" href="mentions_legales.html">Mentions légales</a> - By Akema</p>
+        <p class="mentions"><a href="mentions_legales.html" target="_blank">Mentions légales</a> - By Akema</p>
       </div>
     </div>
-</div>
+
 </body>
 </html>

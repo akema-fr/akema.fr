@@ -3,7 +3,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /assets/
 Disallow: /js/
-Disallow: /logos/
 
 
-Sitemap: https://www.aprime.fr/sitemap.xml
+Sitemap: https://www.akema.fr/sitemap.xml

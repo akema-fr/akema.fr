@@ -165,6 +165,34 @@ h5.italic {
 .barremenu li:hover {
   background: #1d257c;
 }
+#btnHaut{
+  display: none;
+}
+.fixed {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  z-index : 99;
+  background: #777;
+  background-image: url("../assets/arrow.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 18px 18px;
+  font-size: 30px;
+  font-family: LatoR, serif;
+  transition: 0.4s;
+}
+.fixed:hover {
+  background: #9c9c9c;
+  background-image: url("../assets/arrow.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -174,12 +202,7 @@ h5.italic {
 .padding-top-45 {
   padding-top: 45px;
 }
-.fixed:hover {
-  background: #9c9c9c;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 #corps {
   background: whiteSmoke;
   padding-bottom: 75px;

@@ -60,7 +60,7 @@
     </div>
 
     <div class="row menu nomargin" id="burger-content">
-        <nav>
+       <!--  <nav> -->
             <ul class="barremenu nomargin width100">
                 <li><a href="#presentation" class="lato" onclick="closeSidebar()">AKEMA</a></li>
                 <li><a href="produits.html" class="lato">NOS PRODUITS</a></li>
@@ -68,7 +68,7 @@
                 <li><a href="opportunites.html" class="lato">NOS OPPORTUNITÉS</a></li>
                 <li><a href="#contactid" class="lato" onclick="closeSidebar()">CONTACT</a></li>
             </ul>
-        </nav>
+       <!--  </nav> -->
     </div>
 
     <button id="burger-button" class="white">☰</button>
@@ -86,7 +86,7 @@
         let content = document.getElementById('burger-content');
         let sidebarBody = document.getElementById('burger-sidebar-body');
         let button = document.getElementById('burger-button');
-        let overlay = document.getElementById('burger-overlay');
+        let overlay = document.getElementById('burger-overlay'); 
         let activatedClass = 'burger-activated';
         let classToRemove = 'barremenu';
 
@@ -123,15 +123,16 @@
         }
 
         
-        window.onscroll = function() {scrollFunction()};
-
+       /* window.onscroll = function() {
+            scrollFunction();
+        };
         function scrollFunction() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 document.getElementById("btnHaut").style.display = "block";
             } else {
                 document.getElementById("btnHaut").style.display = "none";
             }
-        }
+        }*/
 
         function topFunction() {
             document.body.scrollTop = 0;
@@ -357,6 +358,7 @@
             };
 
             // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            // Display / Hide btnHaut button on scrolling
             function myFunction() {
                 if (window.pageYOffset >= sticky) {
                     navbar.classList.add("sticky");
@@ -364,6 +366,13 @@
                 } else {
                     navbar.classList.remove("sticky");
                     presentation.classList.remove("padding-top-45");
+                }
+
+                // Ajout affichage bouton retour Top
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    document.getElementById("btnHaut").style.display = "block";
+                } else {
+                    document.getElementById("btnHaut").style.display = "none";
                 }
             }
         </script>
@@ -475,5 +484,8 @@
         </div>
     </div>
 </div>
+ 
+<noscript>Désolé, votre navigateur ne supporte pas Javascript. </noscript>
+
 </body>
 </html>

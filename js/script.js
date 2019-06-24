@@ -35,7 +35,7 @@ function validEmail(e) {
 
 /*Fonction servant à générer une carte Google*/
 function myMap() {
-  let myCenter = new google.maps.LatLng(44.776916, -0.660634); /*Définit les coordonnées du centre (ici Akema)*/
+  let myCenter = new google.maps.LatLng(44.778052, -0.647536); /*Définit les coordonnées du centre (ici Akema)*/
   let canvas = document.getElementById("map");
   let options = {center: myCenter, zoom: 12};/*Définit le centre et le niveau de zoom de la map*/
   let map = new google.maps.Map(canvas, options); /*Génère la map*/

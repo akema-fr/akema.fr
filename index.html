@@ -29,31 +29,47 @@
 </head>
 
 <!--<body onload="runSlider();" id="bodytest" class="width100 padding0 margin0">-->
-<body>
-    <div class="large-page row">
-        <a href="index.html" class="col-lg-4"><img class="logo-akema-size" src="images2/Akema_logo.png" alt="Logo Akema"/></a>
-        <ul class="col-lg-8 menu-appearance">
-            <li onclick="changePage('menu-reception')" id="menu-reception" class="menu-element">Accueil</li>
-            <li onclick="changePage('menu-services')" id="menu-services" class="menu-element">Nos services</li>
-            <li onclick="changePage('menu-be-your')" id="menu-be-your" class="menu-element">Qui somme nous ?</li>
-            <li onclick="changePage('menu-recruitment')" id="menu-recruitment" class="menu-element">Nous recrutons</li>
-            <li onclick="changePage('menu-contact')" id="menu-contact" class="menu-element">Contact</li>
-        </ul>
-    </div>
-    <script>
-        var listMenuElement = ['menu-reception', 'menu-services', 'menu-be-your', 'menu-recruitment', 'menu-contact'];
-        function changePage(name){
-            listMenuElement.forEach(function (value) {
-                var menuElement = document.getElementById(value);
-                if (menuElement) {
-                    var color = 'rgb(8, 46, 80)';
-                    if (name !== value) {
-                        color = 'rgb(23, 138, 240)';
+<body onload="adaptMenu('menu-reception')" onscroll="whenScrollPage()">
+    <div class="place-menu">
+        <div class="large-page row">
+            <a href="index.html" class="col-lg-4"><img class="logo-akema-size" src="images2/Akema_logo.png" alt="Logo Akema"/></a>
+            <ul class="col-lg-8 menu-appearance">
+                <li onclick="adaptMenu('menu-reception')" id="menu-reception" class="menu-element">Accueil</li>
+                <li onclick="adaptMenu('menu-services')" id="menu-services" class="menu-element">Nos services</li>
+                <li onclick="adaptMenu('menu-be-your')" id="menu-be-your" class="menu-element">Qui somme nous ?</li>
+                <li onclick="adaptMenu('menu-recruitment')" id="menu-recruitment" class="menu-element">Nous recrutons</li>
+                <li onclick="adaptMenu('menu-contact')" id="menu-contact" class="menu-element">Contact</li>
+            </ul>
+        </div>
+        <script>
+            var listMenuElement = ['menu-reception', 'menu-services', 'menu-be-your', 'menu-recruitment', 'menu-contact'];
+            function adaptMenu(name){
+                listMenuElement.forEach(function (value) {
+                    var menuElement = document.getElementById(value);
+                    if (menuElement) {
+                        var color = 'rgb(8, 46, 80)';
+                        if (name !== value) {
+                            color = 'rgb(23, 138, 240)';
+                        }
+                        menuElement.style.color = color;
                     }
-                    menuElement.style.color = color;
-                }
 
-            });
+                });
+            }
+        </script>
+    </div>
+
+    <div class="background-image-effect" id="manage-first-image-back">
+    </div>
+
+    <div class="reste-page">
+
+    </div>
+    
+    <script>
+        function whenScrollPage() {
+            var elementFirstImageBack = document.getElementById("manage-first-image-back");
+            elementFirstImageBack.style.top = '-' + (7 + window.scrollY/500) + 'em';
         }
     </script>
 

@@ -84,6 +84,13 @@ textarea {
     color: #2271B3;
 }
 
+.button-border-menu-text {
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 2em;
+    color: #2271B3;
+}
+
 @media (min-width: 1732px) {
     .large-page {
         width: 50%;
@@ -623,8 +630,68 @@ textarea {
     margin-bottom: 3em;
 }
 
-/*************** page content *****************************/
+/*************** footer part ******************************/
 
-.reste-page {
-    height: 2000px;
+.footer-part {
+    width: 100%;
+    z-index: 3;
+    background-color: #2271B3;
+    position: relative;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .bock-info-footer {
+        background-color: #2271B3;
+        padding: 0 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bock-info-footer {
+        background-color: #2271B3;
+        padding: 0 2%;
+        max-width: 20em;
+        width: 100%;
+        margin: 0 auto 2em auto;
+    }
+}
+
+.position-sub-title-footer {
+    color: white;
+    padding-bottom: 2em;
+}
+
+.place-map-footer {
+    height: 10em;
+}
+
+.place-button-menu-footer {
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+.button-menu-border {
+    margin: 0 0 0.5em 0;
+    width: 14em;
+    text-align: center;
+    border: solid white 2px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button-menu-border:hover {
+    background-color: rgba(215, 212, 209, 1);
+    color: white;
+    transition: 1s ease;
+}
+
+.manage-signature {
+    text-align: center;
+}
+
+.link-legal-mention {
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
 }

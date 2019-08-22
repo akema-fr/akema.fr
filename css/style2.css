@@ -1,31 +1,14 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #0b2e13;
     width: 100%;
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
     list-style: none;
     display: inline;
-}
-
-/***************** common ***********************/
-
-.big-text {
-    font-size: 2em;
-    font-weight:bold;
-}
-
-.normal-text {
-    font-size: 1.5em;
-}
-
-.large-page {
-    width: 50%;
-    margin-left: 25%;
-    padding-top: 2em;
 }
 
 /****************** menu ***********************/
@@ -35,7 +18,13 @@ li {
     background-color: white;
     width: 100%;
     position: fixed;
-    z-index: 3;
+    z-index: 2;
+}
+
+.large-page {
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 2em;
 }
 
 .logo-akema-size {
@@ -65,42 +54,16 @@ li {
 
 .background-image-effect {
     width: 100%;
-    top: -10em;
+    top: -7em;
     position: fixed;
     z-index: 1;
-    height: 56em;
+    height: 57em;
     background-image: url("../images2/transformation-numerique.jpg");
     background-repeat: no-repeat;
 }
 
 
 /*************** page content *****************************/
-
-.quick-description {
-    width: 100%;
-    padding-top: 46em;
-    z-index: 2;
-    position: relative;
-}
-
-.manage-quick-description {
-    margin-top: 1em;
-    width: 100%;
-    background-color: white;
-}
-
-.question-place {
-    width: 100%;
-    text-align: center;
-}
-
-.separate-border {
-    margin-left: calc(50% - 2.5em);
-    width: 5em;
-    border-top: 2px solid rgba(0, 0, 0, 1);;
-    text-align: center;
-    margin-top: 1em;
-}
 
 .reste-page {
     height: 2000px;

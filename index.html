@@ -32,21 +32,13 @@
 <body onload="adaptMenu('menu-reception')" onscroll="whenScrollPage()">
     <div class="place-menu">
         <div class="large-page row">
-            <a href="index.html" class="col-lg-4 col-md-4 col-sm-4"><img class="logo-akema-size" src="images2/Akema_logo.png" alt="Logo Akema"/></a>
-            <ul class="col-lg-8 col-md-8 col-sm-8 menu-appearance">
+            <a href="index.html" class="col-lg-4"><img class="logo-akema-size" src="images2/Akema_logo.png" alt="Logo Akema"/></a>
+            <ul class="col-lg-8 menu-appearance">
                 <li onclick="adaptMenu('menu-reception')" id="menu-reception" class="menu-element">Accueil</li>
                 <li onclick="adaptMenu('menu-services')" id="menu-services" class="menu-element">Nos services</li>
                 <li onclick="adaptMenu('menu-be-your')" id="menu-be-your" class="menu-element">Qui somme nous ?</li>
                 <li onclick="adaptMenu('menu-recruitment')" id="menu-recruitment" class="menu-element">Nous recrutons</li>
                 <li onclick="adaptMenu('menu-contact')" id="menu-contact" class="menu-element">Contact</li>
-            </ul>
-            <div class="burger-menu-button col-xs-1" onclick="openBurgerMenu()">☰</div>
-            <ul id="burger-menu-ident" class="burger-menu-appearance">
-                <li onclick="adaptMenu('menu-reception')" id="menu-reception" class="buger-menu-element">Accueil</li>
-                <li onclick="adaptMenu('menu-services')" id="menu-services" class="buger-menu-element">Nos services</li>
-                <li onclick="adaptMenu('menu-be-your')" id="menu-be-your" class="buger-menu-element">Qui somme nous ?</li>
-                <li onclick="adaptMenu('menu-recruitment')" id="menu-recruitment" class="buger-menu-element">Nous recrutons</li>
-                <li onclick="adaptMenu('menu-contact')" id="menu-contact" class="buger-menu-element">Contact</li>
             </ul>
         </div>
         <script>
@@ -64,36 +56,10 @@
 
                 });
             }
-
-            function openBurgerMenu(){
-                var element = document.getElementById("burger-menu-ident");
-                if (element.classList.contains('burger-menu-activat')){
-                    element.classList.remove('burger-menu-activat');
-                } else {
-                    element.classList.add('burger-menu-activat');
-                }
-
-            }
         </script>
     </div>
 
     <div class="background-image-effect" id="manage-first-image-back">
-    </div>
-
-    <div class="paragraphe-on-transparence">
-        <h1 class="title-text large-page">
-           EXPERT EN TRANSFORMATION NUMÉRIQUE
-        </h1>
-        <div class="main-transparence-text-place main-text large-page">
-            Akema vous accompagne dans l'organisation,
-            <br>
-            la conception & le management de vos
-            <br>
-            projets informatiques
-        </div>
-        <div class="place-button-square-transparent button-square button-square-text">
-            NOS SERVICES
-        </div>
     </div>
 
     <div class="quick-description">
@@ -106,12 +72,6 @@
                 <br>
                 <br>
                 On vous propose des solutions sur mesure pour manager votre SI, développer des logiciels métiers, et  automatiser vos procédures. On s'adapte à vos contraintes métiers pour répondre à vos besoins !
-
-                <div class="place-button-quick-description">
-                    <div class="button-border button-border-text">
-                        EN SAVOIR PLUS
-                    </div>
-                </div>
             </div>
         </div>
     </div>

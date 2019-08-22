@@ -8,107 +8,24 @@ body {
 
 li {
     list-style: none;
+    display: inline;
 }
 
 /***************** common ***********************/
-
-.title-text {
-    font-weight: bold;
-    color: white;
-    font-size: 3.4em;
-}
 
 .big-text {
     font-size: 2em;
     font-weight:bold;
 }
 
-.main-text {
-    font-size: 1.8em;
-    color: #2271B3;
-}
-
 .normal-text {
     font-size: 1.5em;
 }
 
-.button-square-text {
-    color: white;
-    line-height: 3.2em;
-}
-
-.button-border-text {
-    font-size: 0.6em;
-    font-weight: bold;
-    line-height: 3em;
-    color: #2271B3;
-}
-
-@media (min-width: 1732px) {
-    .large-page {
-        width: 50%;
-        margin-left: 25%;
-        padding-top: 2em;
-    }
-}
-
-@media (min-width: 1446px) and (max-width: 1732px) {
-    .large-page {
-        width: 60%;
-        margin-left: 20%;
-        padding-top: 2em;
-    }
-}
-
-@media (min-width: 1242px) and (max-width: 1446px) {
-    .large-page {
-        width: 70%;
-        margin-left: 20%;
-        padding-top: 2em;
-    }
-}
-
-@media (min-width: 1089px) and (max-width: 1242px) {
-    .large-page {
-        width: 80%;
-        margin-left: 10%;
-        padding-top: 2em;
-    }
-}
-
-@media (min-width: 875px) and (max-width: 1089px) {
-    .large-page {
-        width: 100%;
-        margin-left: 0%;
-        padding-top: 2em;
-    }
-}
-
-@media (max-width: 875px) {
-    .large-page {
-        width: 100%;
-        margin-left: 0%;
-        padding-top: 2em;
-    }
-}
-
-.button-square {
-    width: 14em;
-    background-color: #2271B3;
-}
-
-.button-border {
-    margin: 3em 0 0 0;
-    width: 22em;
-    text-align: center;
-    border: solid #2271B3 2px;
-    cursor: pointer;
-}
-
-.button-border:hover {
-    background-color: #2271B3;
-    color: white;
-    transition: 1s ease;
+.large-page {
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 2em;
 }
 
 /****************** menu ***********************/
@@ -125,69 +42,9 @@ li {
     height: 2.8em;
 }
 
-@media (min-width: 875px) {
-    .menu-appearance {
-        height: 2.8em;
-        display: block;
-    }
+.menu-appearance {
+    height: 2.8em;
 }
-
-@media (max-width: 875px) {
-    .menu-appearance {
-        display: none;
-    }
-}
-
-@media (min-width: 875px) {
-    .burger-menu-appearance {
-        display: none;
-    }
-}
-
-@media (max-width: 875px) {
-    .burger-menu-appearance {
-        position: absolute;
-        background-color: white;
-        float: left;
-        display: none;
-        width: 13em;
-        padding-left: 0;
-        margin-left: 0;
-    }
-}
-
-.burger-menu-activat {
-    display: block;
-}
-
-@media (min-width: 875px) {
-    .burger-menu-button {
-        display: none;
-    }
-}
-
-@media (min-width: 294px) and (max-width: 875px) {
-    .burger-menu-button {
-        display: block;
-        width: 2em;
-        float: right;
-        font-size: 2em;
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 293px) {
-    .burger-menu-button {
-        display: block;
-        width: 2em;
-        float: left;
-        font-size: 2em;
-        cursor: pointer;
-        padding-top: 0.5em;
-    }
-}
-
-
 
 .menu-element {
     padding: 0 1em;
@@ -197,25 +54,9 @@ li {
     text-align: center;
     color: #178AF0;
     transition: 2s ease;
-    display: inline;
 }
 
 .menu-element:hover {
-    color: #082E50;
-    transition: 1s ease;
-}
-
-.buger-menu-element {
-    padding: 0 1em;
-    margin: 1em 0;
-    height: 2.8em;
-    line-height: 2.8em;
-    text-align: center;
-    color: #178AF0;
-    transition: 2s ease;
-}
-
-.buger-menu-element:hover {
     color: #082E50;
     transition: 1s ease;
 }
@@ -232,31 +73,12 @@ li {
     background-repeat: no-repeat;
 }
 
-/******************* paragraphe on transparent **************/
 
-.paragraphe-on-transparence {
-    width: 100%;
-    padding-top: 9em;
-    z-index: 2;
-    position: relative;
-    text-align: center;
-}
-
-.main-transparence-text-place {
-    padding-top: 1em;
-}
-
-.place-button-square-transparent {
-    margin-top: 4em;
-    text-align: center;
-    margin-left: calc(50% - 7em);
-}
-
-/******************* quick description ****************/
+/*************** page content *****************************/
 
 .quick-description {
     width: 100%;
-    padding-top: 3em;
+    padding-top: 46em;
     z-index: 2;
     position: relative;
 }
@@ -268,7 +90,6 @@ li {
 }
 
 .question-place {
-    padding-top: 1em;
     width: 100%;
     text-align: center;
 }
@@ -280,16 +101,6 @@ li {
     text-align: center;
     margin-top: 1em;
 }
-
-.place-button-quick-description {
-    padding-bottom: 2em;
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    margin-left: calc(50% - 8em);
-}
-
-/*************** page content *****************************/
 
 .reste-page {
     height: 2000px;

@@ -11,18 +11,6 @@ li {
     cursor: pointer;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-input {
-    max-width: 80%;
-}
-
-textarea {
-    max-width: 80%;
-}
-
 /***************** common ***********************/
 
 .title-text {
@@ -130,13 +118,6 @@ textarea {
         margin-left: 0%;
         padding-top: 2em;
     }
-}
-
-.button-submit {
-    border: none;
-    width: 14em;
-    background-color: black;
-    cursor: pointer;
 }
 
 .button-square {
@@ -285,8 +266,6 @@ textarea {
     height: 56em;
     background-image: url("../images2/transformation-numerique.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 /******************* paragraphe on transparent **************/
@@ -546,82 +525,10 @@ textarea {
 .contact-part {
     width: 100%;
     z-index: 3;
-    background-image: url("../images2/contact.jpg");
+    background-image: url("../images2/transformation-numerique.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    box-shadow: inset 100em 20em rgba(255, 255, 255, 0.8);
-    position: relative;
-    text-align: center;
 }
 
-.contact-title-place {
-    padding: 0 0 1em 0;
-    width: 100%;
-    text-align: center;
-}
-
-@media (min-width: 875px) {
-    .place-adress-contact {
-        width: 30%;
-        margin: auto;
-    }
-}
-
-@media (min-width: 575px) and (max-width: 875px){
-    .place-adress-contact {
-        width: 42%;
-        margin: auto;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 575px){
-    .place-adress-contact {
-        width: 60%;
-        margin: auto;
-    }
-}
-
-@media (max-width: 360px){
-    .place-adress-contact {
-        width: 80%;
-        margin: auto;
-    }
-}
-
-.social-icon {
-    width: 8em;
-    margin: 1em auto;
-}
-
-.facebook-icon {
-    height: 1.7em;
-    width: auto;
-    margin: 0 0.5em 0 0;
-    cursor: pointer;
-}
-
-.twitter-icon {
-    height: 1.7em;
-    width: auto;
-    margin: 0 0.5em;
-    cursor: pointer;
-}
-
-.linkedin-icon {
-    height: 1.7em;
-    width: auto;
-    margin: 0 0 0 0.5em;
-    cursor: pointer;
-}
-
-.manage-input-contact {
-    padding: 0.1em 0.5em;
-}
-
-.button-submit-contact {
-    margin-bottom: 3em;
-}
 
 /*************** page content *****************************/
 

@@ -21,17 +21,13 @@ li {
 
 .important-title-text {
     font-weight: bold;
+    color: #2271B3;
     font-size: 1.9em;
 }
 
 .sub-title-text {
     font-weight: bold;
     font-size: 1.9em;
-}
-
-.litle-sub-title-text {
-    font-weight: bold;
-    font-size: 1.5em;
 }
 
 .big-text {
@@ -50,10 +46,6 @@ li {
 
 .small-text {
     font-size: 1.2em;
-}
-
-.tiny-text {
-    font-size: 1em;
 }
 
 .transparent-text {
@@ -334,10 +326,6 @@ li {
     position: relative;
 }
 
-.appearence-trunk-title {
-    color: #2271B3;
-}
-
 .block-accompany {
     padding: 3em 0 0 0;
 }
@@ -370,165 +358,6 @@ li {
     object-fit: cover;
     padding: 0 0 3em 0;
 }
-
-.place-small-text-trunk {
-    margin-bottom: 4em;
-}
-
-/*************** services part ******************************/
-
-.services-part {
-    width: 100%;
-    z-index: 3;
-    background-color: #2271B3;
-    position: relative;
-    text-align: center;
-}
-
-.appearence-services-title {
-    padding: 1em 0 2em 0;
-    color: white;
-}
-
-.vignette-area {
-    width: 100%;
-}
-
-@media (max-width: 359px) {
-    .vignette-block {
-        width: 100%;
-        max-width: 20em;
-        height: 10em;
-        color: #2271B3;
-        padding: 0 1em;
-        margin: 0 auto 7em auto;
-    }
-}
-
-@media (min-width: 360px) and (max-width: 576px) {
-    .vignette-block {
-        width: 50%;
-        height: 10em;
-        color: #2271B3;
-        display: inline;
-        float: left;
-        padding: 0 1em;
-        margin-bottom: 7em;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 875px) {
-    .vignette-block {
-        width: 33%;
-        height: 10em;
-        color: #2271B3;
-        display: inline;
-        float: left;
-        padding: 0 1em;
-        margin-bottom: 7em;
-    }
-}
-
-@media (min-width: 876px) {
-    .vignette-block {
-        width: 20%;
-        color: #2271B3;
-        display: inline;
-        float: left;
-        padding: 0 0.5em;
-    }
-}
-
-.manage-title-vignette {
-    padding: 2em 0 0 0;
-    height: 7em;
-    width: 100%;
-    background-color: white;
-}
-
-.place-link-home-discover {
-    width: 100%;
-    background-color: white;
-}
-
-.link-home-discover {
-    font-style: italic;
-    color: #2271B3;
-    width: 100%;
-    padding: 0 0 2em 0;
-    cursor: pointer;
-}
-
-.block-footer-services-part {
-    width: 100%;
-    display: flex;
-    padding: 0 0 2em 0;
-}
-
-/*************** value part *******************************/
-
-.value-part {
-    z-index: 3;
-    width: 100%;
-    background-color: white;
-    text-align: center;
-    position: relative;
-}
-
-.appearence-value-title {
-    color: #2271B3;
-    padding: 0.6em 0 1.2em 0;
-}
-
-.place-main-text-value {
-    width: 70%;
-    margin: 0 15%;
-}
-
-.block-value {
-    padding: 3em 0 0 0;
-}
-
-.place-image-proxomity {
-    padding: 0 0.5em 0 0;
-}
-
-.place-image-inovation {
-    padding: 0 0.5em;
-}
-
-.place-image-adaptability {
-    padding: 0 0 0 0.5em;
-}
-
-.container-value-block {
-    max-width: 23em;
-    margin: auto;
-}
-
-.place-icon-value-block {
-    width: 20%;
-    object-fit: cover;
-    padding: 0 0 3em 0;
-}
-
-.place-sub-title-value {
-    margin-bottom: 1em;
-}
-
-.place-small-text-value {
-    margin-bottom: 4em;
-}
-
-/*************** contact part *****************************/
-
-.contact-part {
-    width: 100%;
-    z-index: 3;
-    background-image: url("../images2/transformation-numerique.jpg");
-    background-repeat: no-repeat;
-}
-
 
 /*************** page content *****************************/
 

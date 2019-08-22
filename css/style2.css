@@ -8,7 +8,6 @@ body {
 
 li {
     list-style: none;
-    cursor: pointer;
 }
 
 /***************** common ***********************/
@@ -17,17 +16,6 @@ li {
     font-weight: bold;
     color: white;
     font-size: 3.4em;
-}
-
-.important-title-text {
-    font-weight: bold;
-    color: #2271B3;
-    font-size: 1.9em;
-}
-
-.sub-title-text {
-    font-weight: bold;
-    font-size: 1.9em;
 }
 
 .big-text {
@@ -42,14 +30,6 @@ li {
 
 .normal-text {
     font-size: 1.5em;
-}
-
-.small-text {
-    font-size: 1.2em;
-}
-
-.transparent-text {
-    color: transparent;
 }
 
 .button-square-text {
@@ -83,7 +63,7 @@ li {
 @media (min-width: 1242px) and (max-width: 1446px) {
     .large-page {
         width: 70%;
-        margin-left: 15%;
+        margin-left: 20%;
         padding-top: 2em;
     }
 }
@@ -115,12 +95,6 @@ li {
 .button-square {
     width: 14em;
     background-color: #2271B3;
-    cursor: pointer;
-}
-
-.button-square:hover {
-    background-color: black;
-    transition: 1s ease;
 }
 
 .button-border {
@@ -144,7 +118,7 @@ li {
     background-color: white;
     width: 100%;
     position: fixed;
-    z-index: 4;
+    z-index: 3;
 }
 
 .logo-akema-size {
@@ -199,7 +173,6 @@ li {
         float: right;
         font-size: 2em;
         cursor: pointer;
-        user-select: none;
     }
 }
 
@@ -211,7 +184,6 @@ li {
         font-size: 2em;
         cursor: pointer;
         padding-top: 0.5em;
-        user-select: none;
     }
 }
 
@@ -265,7 +237,7 @@ li {
 .paragraphe-on-transparence {
     width: 100%;
     padding-top: 9em;
-    z-index: 3;
+    z-index: 2;
     position: relative;
     text-align: center;
 }
@@ -285,7 +257,7 @@ li {
 .quick-description {
     width: 100%;
     padding-top: 3em;
-    z-index: 3;
+    z-index: 2;
     position: relative;
 }
 
@@ -315,48 +287,6 @@ li {
     text-align: center;
     background-color: white;
     margin-left: calc(50% - 8em);
-}
-
-/*************** trunk page ****************************/
-
-.trunk-page {
-    text-align: center;
-    z-index: 3;
-    background-color: white;
-    position: relative;
-}
-
-.block-accompany {
-    padding: 3em 0 0 0;
-}
-
-.place-image-advise {
-    padding: 0 0.5em 0 0;
-}
-
-.place-image-implementation {
-    padding: 0 0.5em;
-}
-
-.place-image-exploitation {
-    padding: 0 0 0 0.5em;
-}
-
-.trunk-button {
-    width: 100%;
-    padding-bottom: 4em;
-}
-
-.container-block {
-    max-width: 23em;
-    margin: auto;
-}
-
-.place-image-block {
-    width: 100%;
-    height: 30em;
-    object-fit: cover;
-    padding: 0 0 3em 0;
 }
 
 /*************** page content *****************************/

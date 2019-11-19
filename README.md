@@ -12,3 +12,5 @@ néscessaires, puis de push sur la branche **gh-pages**.
 Dans le cas ou il serait néscessaire de versionner des changements sans les mettre en ligne, il suffit de pousser 
 ces derniers sur la branche **dev** prévue à cet effet. Tout ce qui se trouve en dehors de **gh-pages** ne sera pas visible
 sur le site akema.fr
+
+# Site déplacé sur wordpress.
